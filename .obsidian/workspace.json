@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Index.md",
+                "file": "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Index"
+              "title": "6.2 按钮组件"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Index.md",
+                "file": "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Index 的大纲"
+              "title": "6.2 按钮组件 的大纲"
             }
           }
         ],
@@ -172,12 +172,12 @@
   },
   "active": "a6bef36f356aa361",
   "lastOpenFiles": [
+    "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.4 切换按钮组件.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.3 单选框组件.md",
-    "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
-    "harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md",
     "Index.md",
     "README.md",
+    "harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md",
     "harmonyOS/鸿蒙应用开发实训教程.md",
     "harmonyOS/media/Pasted image 20250427223752.png",
     "harmonyOS/布局/列表.md",
