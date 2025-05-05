@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6e2253a14386321f",
+        "id": "34de40e78db4c503",
         "type": "tabs",
         "children": [
           {
-            "id": "6c30a3af0dc55476",
+            "id": "a6bef36f356aa361",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "af45f37a06ceb2d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "6.1 文本组件"
+              "title": "README"
             }
           }
         ]
@@ -156,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "index 的大纲"
+              "title": "README 的大纲"
             }
           }
         ],
@@ -184,17 +170,17 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "6c30a3af0dc55476",
+  "active": "693518d0b6d99259",
   "lastOpenFiles": [
+    "harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md",
+    "README.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.4 切换按钮组件.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.3 单选框组件.md",
-    "harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md",
     "harmonyOS/鸿蒙应用开发实训教程.md",
     "harmonyOS/media/Pasted image 20250427223752.png",
     "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
     "harmonyOS/README.md",
     "harmonyOS/布局/列表.md",
-    "index.md",
     "harmonyOS/media/Pasted image 20250427223835.png",
     "harmonyOS/布局/相对布局.md",
     "web/harmonyos/进阶篇/第6章-基础组件/6.2-按钮组件.html",
