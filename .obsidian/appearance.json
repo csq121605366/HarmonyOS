@@ -1,0 +1,9 @@
+{
+  "theme": "moonstone",
+  "baseFontSize": 22,
+  "interfaceFontFamily": "HarmonyOS Sans SC",
+  "baseFontSizeAction": true,
+  "cssTheme": "Minimal",
+  "accentColor": "#f55c5c",
+  "showRibbon": true
+}

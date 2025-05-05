@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "3b4f904eb449aa73",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e2253a14386321f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c30a3af0dc55476",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "af45f37a06ceb2d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6.1 文本组件"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b4aaa5cc39b80261",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3db2423340b8f18",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "693518d0b6d99259",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "5e8dc0e569c216d8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "1a1a89da9b33ca9b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e2604709d554f529",
+    "type": "split",
+    "children": [
+      {
+        "id": "bca5e48ca96841e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc8fcf1aede4deec",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "目录.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "目录 的反向链接列表"
+            }
+          },
+          {
+            "id": "a7cf36c6830dddc0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "布局/相对布局 (RelativeContainer)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "相对布局 (RelativeContainer)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架 的出链列表"
+            }
+          },
+          {
+            "id": "82ff6837bfedfd3f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4da625dbd646b988",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "index 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "github-sync:Sync with Remote": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "active": "6c30a3af0dc55476",
+  "lastOpenFiles": [
+    "harmonyOS/进阶篇/第6章 基础组件/6.4 切换按钮组件.md",
+    "harmonyOS/进阶篇/第6章 基础组件/6.3 单选框组件.md",
+    "harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md",
+    "harmonyOS/鸿蒙应用开发实训教程.md",
+    "harmonyOS/media/Pasted image 20250427223752.png",
+    "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
+    "harmonyOS/README.md",
+    "harmonyOS/布局/列表.md",
+    "index.md",
+    "harmonyOS/media/Pasted image 20250427223835.png",
+    "harmonyOS/布局/相对布局.md",
+    "web/harmonyos/进阶篇/第6章-基础组件/6.2-按钮组件.html",
+    "web/harmonyos/进阶篇/第6章-基础组件/6.1-文本组件.html",
+    "web/harmonyos/进阶篇/第6章-基础组件",
+    "web/harmonyos/进阶篇",
+    "web/harmonyos/基础篇/第4章-arkui框架入门/4.2-资源管理.html",
+    "web/harmonyos/基础篇/第4章-arkui框架入门/4.1-stage模型.html",
+    "web/harmonyos/基础篇/第4章-arkui框架入门",
+    "web/harmonyos/基础篇",
+    "harmonyOS/基础篇/第4章 ArkUI框架入门/4.1 Stage模型.md",
+    "meida/Pasted image 20250505091733.png",
+    "harmonyOS/media/Pasted image 20250427224107.png",
+    "harmonyOS/media/Pasted image 20250427224056.png",
+    "harmonyOS/media/Pasted image 20250427224053.png",
+    "harmonyOS/media/Pasted image 20250427223913.png",
+    "meida",
+    "().md",
+    "harmonyOS/布局/弹性布局.md",
+    "harmonyOS/基础篇/第4章 ArkUI框架入门/4.2 资源管理.md",
+    "harmonyOS/基础篇/第4章 ArkUI框架入门/4.3 多语言配置.md",
+    "harmonyOS/基础篇/第4章 ArkUI框架入门",
+    "web/lib/media/pasted-image-20250427224056.png",
+    "web/lib/media/pasted-image-20250427224107.png",
+    "web/lib/media/pasted-image-20250427223913.png",
+    "harmonyOS/布局/线性布局.md",
+    "harmonyOS/布局/层叠布局.md",
+    "harmonyOS/布局/布局概述.md",
+    "未命名.md",
+    "src/index.md",
+    "src/harmonyOS/README.md",
+    "src/harmonyOS/鸿蒙应用开发实训教程.md",
+    "src/harmonyOS/布局/线性布局.md",
+    "src/harmonyOS/布局/相对布局.md",
+    "src/harmonyOS/布局/弹性布局.md",
+    "src/harmonyOS/布局/布局概述.md"
+  ]
+}
