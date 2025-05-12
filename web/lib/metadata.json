@@ -1,6 +1,6 @@
 {
   "vaultName": "book",
-  "lastExport": 1746460254880,
+  "lastExport": 1747091801369,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon",
   "useCustomHeadContent": false,
@@ -18,6 +18,9 @@
     "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.3 单选框组件.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.4 切换按钮组件.md",
+    "harmonyOS/进阶篇/第6章 基础组件/6.5 进度条组件.md",
+    "harmonyOS/进阶篇/第6章 基础组件/6.6 显示图片组件.md",
+    "harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md",
     "harmonyOS/media/Pasted image 20250427223752.png",
     "harmonyOS/media/Pasted image 20250427223835.png",
     "harmonyOS/media/Pasted image 20250427223913.png",
@@ -26,12 +29,11 @@
     "harmonyOS/media/Pasted image 20250427224107.png",
     "harmonyOS/（鸿蒙应用开发实训教程）鹤壁职业技术学院数字教材建设申报书.docx",
     "harmonyOS/鸿蒙应用开发实训教程.md",
+    "harmonyOS/鸿蒙应用开发实训教程 1.md",
+    "meida/videoTest.mp4",
     "Index.md",
     "README.md",
-    "lib/media/pasted-image-20250427223835.png",
-    "lib/media/pasted-image-20250427223913.png",
-    "lib/media/pasted-image-20250427224056.png",
-    "lib/media/pasted-image-20250427224107.png",
+    "lib/media/videotest.mp4",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
@@ -60,7 +62,11 @@
     "lib/styles/obsidian.css",
     "lib/styles/theme.css",
     "lib/styles/global-variable-styles.css",
-    "lib/styles/main-styles.css"
+    "lib/styles/main-styles.css",
+    "lib/media/pasted-image-20250427223835.png",
+    "lib/media/pasted-image-20250427223913.png",
+    "lib/media/pasted-image-20250427224056.png",
+    "lib/media/pasted-image-20250427224107.png"
   ],
   "mainDependencies": [
     "lib/scripts/graph-wasm.wasm",
@@ -95,14 +101,14 @@
   ],
   "fileInfo": {
     "harmonyOS/布局/布局概述.md": {
-      "modifiedTime": 1746460254880,
-      "sourceSize": 11388,
+      "modifiedTime": 1747091801369,
+      "sourceSize": 11232,
       "exportedPath": "harmonyos/布局/布局概述.html",
       "dependencies": []
     },
     "harmonyOS/布局/层叠布局.md": {
-      "modifiedTime": 1746460254880,
-      "sourceSize": 5284,
+      "modifiedTime": 1747091801369,
+      "sourceSize": 4816,
       "exportedPath": "harmonyos/布局/层叠布局.html",
       "dependencies": []
     },
@@ -214,8 +220,8 @@
       "dependencies": []
     },
     "harmonyOS/鸿蒙应用开发实训教程.md": {
-      "modifiedTime": 1746460254880,
-      "sourceSize": 3478,
+      "modifiedTime": 1747091801369,
+      "sourceSize": 3479,
       "exportedPath": "harmonyos/鸿蒙应用开发实训教程.html",
       "dependencies": []
     },
@@ -256,177 +262,215 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/6155340132a851f6089e.svg": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 315,
       "exportedPath": "lib/media/6155340132a851f6089e.svg",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1746460254880,
-      "sourceSize": 12860,
+      "modifiedTime": 1747091801369,
+      "sourceSize": 15808,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1746460254880,
-      "sourceSize": 1114,
+      "modifiedTime": 1747091801369,
+      "sourceSize": 1481,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 138258,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 225163,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 391,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1746460254880,
+      "modifiedTime": 1747091801369,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
+      "dependencies": []
+    },
+    "harmonyOS/进阶篇/第6章 基础组件/6.5 进度条组件.md": {
+      "modifiedTime": 1747091801369,
+      "sourceSize": 3637,
+      "exportedPath": "harmonyos/进阶篇/第6章-基础组件/6.5-进度条组件.html",
+      "dependencies": []
+    },
+    "harmonyOS/进阶篇/第6章 基础组件/6.6 显示图片组件.md": {
+      "modifiedTime": 1747091801369,
+      "sourceSize": 4210,
+      "exportedPath": "harmonyos/进阶篇/第6章-基础组件/6.6-显示图片组件.html",
+      "dependencies": []
+    },
+    "harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md": {
+      "modifiedTime": 1747091801369,
+      "sourceSize": 5963,
+      "exportedPath": "harmonyos/进阶篇/第7章-高级组件/7.1-视频播放组件.html",
+      "dependencies": [
+        "lib/media/videotest.mp4"
+      ]
+    },
+    "harmonyOS/鸿蒙应用开发实训教程 1.md": {
+      "modifiedTime": 1747091801369,
+      "sourceSize": 3479,
+      "exportedPath": "harmonyos/鸿蒙应用开发实训教程-1.html",
+      "dependencies": []
+    },
+    "meida/videoTest.mp4": {
+      "modifiedTime": 1747091801369,
+      "sourceSize": 1438510,
+      "exportedPath": "meida/videotest.mp4",
+      "dependencies": []
+    },
+    "lib/media/videotest.mp4": {
+      "modifiedTime": 1747091801369,
+      "sourceSize": 1438510,
+      "exportedPath": "lib/media/videotest.mp4",
       "dependencies": []
     }
   }

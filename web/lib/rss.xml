@@ -1,10 +1,294 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 05 May 2025 15:51:10 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 05 May 2025 15:50:54 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
- 布局概述       组件按照布局的要求依次排列，构成应用的页面。在声明式UI中，所有的页面都是由自定义组件构成，开发者可以根据自己的需求，选择合适的布局进行页面开发。    布局指用特定的组件……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\布局概述.html</link><guid isPermaLink="false">harmonyOS/布局/布局概述.md</guid><pubDate>Mon, 28 Apr 2025 14:30:42 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163838.43835122028715656556294649053945:50001231000000:2800:D8F1327EF0C8B5E28994059CE404322B30722A2E097C66D328EA458055221787.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163838.43835122028715656556294649053945:50001231000000:2800:D8F1327EF0C8B5E28994059CE404322B30722A2E097C66D328EA458055221787.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[层叠布局]]></title><description><![CDATA[ 
- 层叠布局 (Stack)                 概述     层叠布局（StackLayout）用于在屏幕上预留一块区域来显示组件中的元素，提供元素可以重叠的布局。层叠布局通过Stac……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\层叠布局.html</link><guid isPermaLink="false">harmonyOS/布局/层叠布局.md</guid><pubDate>Sun, 27 Apr 2025 14:57:19 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163840.17197511546609011459261801204948:50001231000000:2800:14A44EAD6F106B555BF891BD0CBB7EB900BE4E7503F02C751577C37C869BE40F.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163840.17197511546609011459261801204948:50001231000000:2800:14A44EAD6F106B555BF891BD0CBB7EB900BE4E7503F02C751577C37C869BE40F.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[创建列表 (List)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
- 创建列表 (List)                 概述     列表是一种复杂的容器，当列表项达到一定数量，内容超过屏幕大小时，可以自动提供滚动功能。它适合用于呈现同类数据类型或数据类型集……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\列表.html</link><guid isPermaLink="false">harmonyOS/布局/列表.md</guid><pubDate>Mon, 28 Apr 2025 15:56:37 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250428175937.64185603123160245048354299152758:50001231000000:2800:3011D47336F74FF5AB0D90C06BC5D54D189898CEA3569134CA879B19B22404A9.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250428175937.64185603123160245048354299152758:50001231000000:2800:3011D47336F74FF5AB0D90C06BC5D54D189898CEA3569134CA879B19B22404A9.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[弹性布局 (Flex)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
- 弹性布局 (Flex)                 概述     弹性布局（Flex）提供更加有效的方式对容器中的子元素进行排列、对齐和分配剩余空间。常用于页面头部导航栏的均匀分布、页面框架……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\弹性布局.html</link><guid isPermaLink="false">harmonyOS/布局/弹性布局.md</guid><pubDate>Sun, 27 Apr 2025 15:23:04 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163841.23306797182734616010851125989111:50001231000000:2800:A735C02DF27248DD7F6831FBEA5667D1FF50A4A9805128DCC13D76C88657D729.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163841.23306797182734616010851125989111:50001231000000:2800:A735C02DF27248DD7F6831FBEA5667D1FF50A4A9805128DCC13D76C88657D729.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[线性布局]]></title><description><![CDATA[ 
- 线性布局 (Row/Column)                 概述     线性布局（LinearLayout）是开发中最常用的布局，通过线性容器Row和Column构建。线性布局是其他布……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\线性布局.html</link><guid isPermaLink="false">harmonyOS/布局/线性布局.md</guid><pubDate>Sun, 27 Apr 2025 14:41:50 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163838.89999381839122363724497242356524:50001231000000:2800:391C2D4C3FA524AA0C54BBFB43DE345AD8EE6F13F975446DC4AA33A393B69CB6.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163838.89999381839122363724497242356524:50001231000000:2800:391C2D4C3FA524AA0C54BBFB43DE345AD8EE6F13F975446DC4AA33A393B69CB6.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[相对布局 (RelativeContainer)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
- 相对布局 (RelativeContainer)                 概述     在应用的开发过程中，经常需要设计复杂界面，此时涉及到多个相同或不同组件之间的嵌套。如果布局组件嵌套……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\相对布局.html</link><guid isPermaLink="false">harmonyOS/布局/相对布局.md</guid><pubDate>Sun, 27 Apr 2025 15:36:09 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163843.93300395628947510234473892357762:50001231000000:2800:B619691DDF9EC3BF576E747EEFB945168676638A242B8DFA97A9C0DCA501AFD5.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163843.93300395628947510234473892357762:50001231000000:2800:B619691DDF9EC3BF576E747EEFB945168676638A242B8DFA97A9C0DCA501AFD5.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.1 Stage模型]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 12 May 2025 23:16:47 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 12 May 2025 23:16:41 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
+ 布局概述       组件按照布局的要求依次排列，构成应用的页面。在声明式UI中，所有的页面都是由自定义组件构成，开发者可以根据自己的需求，选择合适的布局进行页面开发。    布局指用特定的组件……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\布局概述.html</link><guid isPermaLink="false">harmonyOS/布局/布局概述.md</guid><pubDate>Wed, 07 May 2025 00:03:40 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[层叠布局]]></title><description><![CDATA[ 
+ 层叠布局 (Stack)                 概述     层叠布局（StackLayout）用于在屏幕上预留一块区域来显示组件中的元素，提供元素可以重叠的布局。层叠布局通过Stac……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\层叠布局.html</link><guid isPermaLink="false">harmonyOS/布局/层叠布局.md</guid><pubDate>Wed, 07 May 2025 00:04:23 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.5 进度条组件]]></title><description><![CDATA[ 
+ <br><br><br>Progress是进度条显示组件，显示内容通常为目标操作的当前进度。<br><br>Progress通过调用接口来创建，接口调用形式如下：<br>Progress(options: {value: number, total?: number, type?: ProgressType})
+<br>其中，value用于设置初始进度值，total用于设置进度总长度，type用于设置Progress样式。<br>Progress({ value: 24, total: 100, type: ProgressType.Linear }) // 创建一个进度总长为100，初始进度值为24的线性进度条
+<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png" referrerpolicy="no-referrer"><br><br>Progress有5种可选类型，通过ProgressType可以设置进度条样式，ProgressType类型包括：线性样式、环形无刻度样式、环形有刻度样式、圆形样式和胶囊样式。<br>
+<br>ProgressType.Linear（线性样式）
+Progress({ value: 20, total: 100, type: ProgressType.Linear }).width(200).height(50)
+Progress({ value: 20, total: 100, type: ProgressType.Linear }).width(50).height(200)
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210838615.png" referrerpolicy="no-referrer">
+<br>ProgressType.Ring（环形无刻度样式）
+	// 从左往右，1号环形进度条，默认前景色为蓝色渐变，默认strokeWidth进度条宽度为2.0vp
+Progress({ value: 40, total: 150, type: ProgressType.Ring }).width(100).height(100)
+	// 从左往右，2号环形进度条
+Progress({ value: 40, total: 150, type: ProgressType.Ring }).width(100).height(100).color(Color.Grey).style({ strokeWidth: 15})
+
+<img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210954089.png" referrerpolicy="no-referrer">
+<br>ProgressType.ScaleRing（环形有刻度样式）
+  Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
+    .backgroundColor(Color.Black)
+    .style({ scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条总刻度数为20，刻度宽度为5vp
+Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
+    .backgroundColor(Color.Black)
+    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为5vp
+Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
+    .backgroundColor(Color.Black)
+    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 3 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为3vp
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211619653.png" referrerpolicy="no-referrer">
+<br>ProgressType.Eclipse（圆形样式）
+// 从左往右，1号圆形进度条，默认前景色为蓝色
+Progress({ value: 10, total: 150, type: ProgressType.Eclipse }).width(100).height(100)
+// 从左往右，2号圆形进度条，指定前景色为灰色
+Progress({ value: 20, total: 150, type: ProgressType.Eclipse }).color(Color.Grey).width(100).height(100)
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211710885.png" referrerpolicy="no-referrer">
+<br>ProgressType.Capsule（胶囊样式）
+Progress({ value: 10, total: 150, type: ProgressType.Capsule }).width(100).height(50)
+Progress({ value: 20, total: 150, type: ProgressType.Capsule }).width(50).height(100).color(Color.Grey)
+Progress({ value: 50, total: 150, type: ProgressType.Capsule }).width(50).height(100).color(Color.Blue).backgroundColor(Color.Black)
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211749373.png" referrerpolicy="no-referrer">
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.5-进度条组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.5 进度条组件.md</guid><pubDate>Sun, 11 May 2025 13:18:12 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.6 显示图片组件]]></title><description><![CDATA[ 
+ <br><br><br>开发者经常需要在应用中显示一些图片，例如：按钮中的icon、网络图片、本地图片等。在应用中显示图片需要使用Image组件实现，Image支持多种图片格式，包括png、jpg、bmp、svg、gif和heif。<br><br>Image组件通过调用接口来创建，接口调用形式如下：<br>Image(src: PixelMap | ResourceStr | DrawableDescriptor)
+<br>该接口通过图片数据源获取图片，支持本地图片和网络图片的渲染展示。其中，src是图片的数据源。<br><br>Image支持加载存档图、多媒体像素图两种类型。<br><br>存档图类型的数据源可以分为本地资源、网络资源、Resource资源、媒体库资源和base64。<br>
+<br>本地资源<br>
+在ets文件夹下创建images文件夹，将本地图片放入。Image组件引入本地图片路径，即可显示图片（注意：根目录为ets文件夹）。
+Image('images/view.jpg')
+
+
+<br>网络资源
+// 实际使用时请替换为真实地址
+Image('https://www.example.com/example.JPG') 
+
+
+<br>Resource资源<br>
+使用资源格式可以跨包/跨模块引入图片，resources文件夹下的图片都可以通过 $r资源接口读取到并转换到Resource格式。<br>
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png" referrerpolicy="no-referrer">
+Image($r('app.media.icon'))
+
+还可以将图片放在rawfile文件夹下。<br>
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084048179.png" referrerpolicy="no-referrer">
+Image($rawfile('example1.png'))
+
+
+<br>媒体库file://data/storage<br>
+支持file://路径前缀的字符串，用于访问通过<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker" target="_blank">选择器</a>提供的图片路径。具体代码如下：
+import { photoAccessHelper } from '@kit.MediaLibraryKit';  
+@Entry  
+@Component  
+struct Index {  
+  @State imgData: string  = ''  
+  
+  getImg() {
+	// 调用选择器模块选取本地媒体库中图片文件
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();  
+    photoPicker.select({  
+      maxSelectNumber:1  
+    }).then((PhotoSelectResult) =&gt; {  
+      this.imgData = PhotoSelectResult.photoUris[0];  
+    })  
+  }  
+  
+  build() {  
+    Column() {  
+      Button('获取图片').onClick((event: ClickEvent) =&gt; {  
+        this.getImg()  
+      })
+      // 从媒体库获取的url格式通常为：'file://media/Photo/test.png'
+      Image(this.imgData).width(200)  
+    }.width('100%').height('100%')  
+  }  
+}
+
+
+<br>base64<br>
+路径格式为data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data]，其中[base64 data]为Base64字符串数据。
+<br><br><br>通过objectFit属性使图片缩放到高度和宽度确定的框内。objectFit的参数类型为枚举值ImageFit，包括Contain、Cover、Auto、Fill、ScaleDown和None。具体效果如下：<br>Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 保持宽高比进行缩小或者放大，使得图片完全显示在显示边界内。  
+  .objectFit(ImageFit.Contain)
+
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+	// 保持宽高比进行缩小或者放大，使得图片两边都大于或等于显示边界。
+  .objectFit(ImageFit.Cover)
+  
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 自适应显示。
+  .objectFit(ImageFit.Auto)
+  
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 不保持宽高比进行放大缩小，使得图片充满显示边界。
+  .objectFit(ImageFit.Fill)
+
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 保持宽高比显示，图片缩小或者保持不变。 
+  .objectFit(ImageFit.ScaleDown)
+  
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 保持原有尺寸显示。
+  .objectFit(ImageFit.None)
+
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.6-显示图片组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.6 显示图片组件.md</guid><pubDate>Sun, 11 May 2025 10:57:04 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.1 视频播放组件]]></title><description><![CDATA[ 
+ <br><br><br>Video组件用于播放视频文件并控制其播放状态，常用于为短视频和应用内部视频的列表页面。当视频完整出现时会自动播放，用户点击视频区域则会暂停播放，同时显示播放进度条，通过拖动播放进度条指定视频播放到具体位置。<br><br>Video通过调用接口来创建，接口调用形式如下：<br>Video(value: VideoOptions)
+<br><br>Video组件支持加载本地视频和网络视频。<br><br>资源：<br>
+<img alt="preview.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" referrerpolicy="no-referrer"><br><br>加载本地视频时，首先在本地rawfile目录指定对应的文件，如下图所示。<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512222605483.png" referrerpolicy="no-referrer"><br>再使用资源访问符$rawfile()引用视频资源。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private previewUris: Resource = $r('app.media.preview')
+  private innerResource: Resource = $rawfile('videoTest.mp4')
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.innerResource,
+        previewUri: this.previewUris,
+        controller: this.controller
+      })
+    }
+  }
+}
+<br><br>支持file://路径前缀的字符串，用于读取应用沙箱路径内的资源，需要保证应用沙箱目录路径下的文件存在并且有可读权限。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private videoSrc: string = 'file:///data/storage/el2/base/haps/entry/files/show.mp4'
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.videoSrc,
+        controller: this.controller
+      })
+    }
+  }
+}
+<br><br>加载网络视频时，需要申请权限ohos.permission.INTERNET，具体申请方式请参考<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions" target="_blank">声明权限</a>。此时，Video的src属性为网络视频的链接。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private previewUris: Resource = $r('app.media.preview')
+  private videoSrc: string = 'http://vd3.bdstatic.com/mda-merqt9w12asswjse/360p/h264/1622050246127682391/mda-merqt9w12asswjse.mp4' // 使用时请替换为实际视频加载网址
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.videoSrc,
+        previewUri: this.previewUris,
+        controller: this.controller
+      })
+    }
+  }
+}
+<br><br>Video组件<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-media-components-video#%E5%B1%9E%E6%80%A7" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-media-components-video#%E5%B1%9E%E6%80%A7" target="_blank">属性</a>主要用于设置视频的播放形式。例如设置视频播放是否静音、播放是否显示控制条等。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+
+
+  build() {
+    Column() {
+      Video({
+        controller: this.controller
+      })
+        .muted(false) // 设置是否静音
+        .controls(false) // 设置是否显示默认控制条
+        .autoPlay(false) // 设置是否自动播放
+        .loop(false) // 设置是否循环播放
+        .objectFit(ImageFit.Contain) // 设置视频适配模式
+    }
+  }
+}
+<br><br>Video组件回调事件主要为播放开始、暂停结束、播放失败、播放停止、视频准备和操作进度条等事件，除此之外，Video组件也支持通用事件的调用，如点击、触摸等事件的调用。<br>// xxx.ets
+@Entry
+@Component
+struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private previewUris: Resource = $r('app.media.preview')
+  private innerResource: Resource = $rawfile('videoTest.mp4')
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.innerResource,
+        previewUri: this.previewUris,
+        controller: this.controller
+      })
+        .onUpdate((event) =&gt; { // 更新事件回调
+          console.info("Video update.");
+        })
+        .onPrepared((event) =&gt; { // 准备事件回调
+          console.info("Video prepared.");
+        })
+        .onError(() =&gt; { // 失败事件回调
+          console.info("Video error.");
+        })
+        .onStop(() =&gt; { // 停止事件回调
+          console.info("Video stopped.");
+        })
+    }
+  }
+}
+<br><br>Video控制器主要用于控制视频的状态，包括播放、暂停、停止以及设置进度等。<br>首先需要声明控制器<br>controller: VideoController = new VideoController()
+<br>然后利用在Video组件中设置控制器<br>@Entry  
+@Component  
+struct Index {  
+  private controller: VideoController = new VideoController()  
+  private previewUris: Resource = $r('app.media.preview')  
+  private innerResource: Resource = $rawfile('videoTest.mp4')
+  
+  
+  build() {  
+    Column() {  
+      Video({  
+        src: this.innerResource,  
+        previewUri: this.previewUris,  
+        controller: this.controller  
+      })  
+        .width('100%')  
+        .height(600)  
+  
+      Row() {  
+        Button('start').onClick(() =&gt; {  
+          this.controller.start() // 开始播放  
+        }).margin(2)  
+        Button('pause').onClick(() =&gt; {  
+          this.controller.pause() // 暂停播放  
+        }).margin(2)  
+        Button('stop').onClick(() =&gt; {  
+          this.controller.stop() // 结束播放  
+        }).margin(2)  
+        Button('reset').onClick(() =&gt; {  
+          this.controller.reset() // 重置AVPlayer  
+        }).margin(2)  
+        Button('setTime').onClick(() =&gt; {  
+          this.controller.setCurrentTime(10, SeekMode.Accurate) // 精准跳转到视频的10s位置  
+        }).margin(2)  
+      }  
+    }  
+	}
+}
+<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.1-视频播放组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md</guid><pubDate>Mon, 12 May 2025 15:09:47 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[基础篇]]></title><description><![CDATA[ 
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></description><link>harmonyos\鸿蒙应用开发实训教程.html</link><guid isPermaLink="false">harmonyOS/鸿蒙应用开发实训教程.md</guid><pubDate>Wed, 07 May 2025 00:05:41 GMT</pubDate></item><item><title><![CDATA[基础篇]]></title><description><![CDATA[ 
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></description><link>harmonyos\鸿蒙应用开发实训教程-1.html</link><guid isPermaLink="false">harmonyOS/鸿蒙应用开发实训教程 1.md</guid><pubDate>Wed, 07 May 2025 00:05:41 GMT</pubDate></item><item><title><![CDATA[创建列表 (List)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
+ 创建列表 (List)                 概述     列表是一种复杂的容器，当列表项达到一定数量，内容超过屏幕大小时，可以自动提供滚动功能。它适合用于呈现同类数据类型或数据类型集……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\列表.html</link><guid isPermaLink="false">harmonyOS/布局/列表.md</guid><pubDate>Mon, 28 Apr 2025 15:56:37 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250428175937.64185603123160245048354299152758:50001231000000:2800:3011D47336F74FF5AB0D90C06BC5D54D189898CEA3569134CA879B19B22404A9.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250428175937.64185603123160245048354299152758:50001231000000:2800:3011D47336F74FF5AB0D90C06BC5D54D189898CEA3569134CA879B19B22404A9.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[弹性布局 (Flex)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
+ 弹性布局 (Flex)                 概述     弹性布局（Flex）提供更加有效的方式对容器中的子元素进行排列、对齐和分配剩余空间。常用于页面头部导航栏的均匀分布、页面框架……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\弹性布局.html</link><guid isPermaLink="false">harmonyOS/布局/弹性布局.md</guid><pubDate>Sun, 27 Apr 2025 15:23:04 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163841.23306797182734616010851125989111:50001231000000:2800:A735C02DF27248DD7F6831FBEA5667D1FF50A4A9805128DCC13D76C88657D729.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163841.23306797182734616010851125989111:50001231000000:2800:A735C02DF27248DD7F6831FBEA5667D1FF50A4A9805128DCC13D76C88657D729.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[线性布局]]></title><description><![CDATA[ 
+ 线性布局 (Row/Column)                 概述     线性布局（LinearLayout）是开发中最常用的布局，通过线性容器Row和Column构建。线性布局是其他布……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\线性布局.html</link><guid isPermaLink="false">harmonyOS/布局/线性布局.md</guid><pubDate>Sun, 27 Apr 2025 14:41:50 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163838.89999381839122363724497242356524:50001231000000:2800:391C2D4C3FA524AA0C54BBFB43DE345AD8EE6F13F975446DC4AA33A393B69CB6.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163838.89999381839122363724497242356524:50001231000000:2800:391C2D4C3FA524AA0C54BBFB43DE345AD8EE6F13F975446DC4AA33A393B69CB6.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[相对布局 (RelativeContainer)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
+ 相对布局 (RelativeContainer)                 概述     在应用的开发过程中，经常需要设计复杂界面，此时涉及到多个相同或不同组件之间的嵌套。如果布局组件嵌套……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\相对布局.html</link><guid isPermaLink="false">harmonyOS/布局/相对布局.md</guid><pubDate>Sun, 27 Apr 2025 15:36:09 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163843.93300395628947510234473892357762:50001231000000:2800:B619691DDF9EC3BF576E747EEFB945168676638A242B8DFA97A9C0DCA501AFD5.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250427163843.93300395628947510234473892357762:50001231000000:2800:B619691DDF9EC3BF576E747EEFB945168676638A242B8DFA97A9C0DCA501AFD5.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.1 Stage模型]]></title><description><![CDATA[ 
  ]]></description><link>harmonyos\基础篇\第4章-arkui框架入门\4.1-stage模型.html</link><guid isPermaLink="false">harmonyOS/基础篇/第4章 ArkUI框架入门/4.1 Stage模型.md</guid><pubDate>Sun, 04 May 2025 14:21:06 GMT</pubDate></item><item><title><![CDATA[4.2 资源管理]]></title><description><![CDATA[ 
  ]]></description><link>harmonyos\基础篇\第4章-arkui框架入门\4.2-资源管理.html</link><guid isPermaLink="false">harmonyOS/基础篇/第4章 ArkUI框架入门/4.2 资源管理.md</guid><pubDate>Sun, 04 May 2025 14:21:06 GMT</pubDate></item><item><title><![CDATA[6.1 文本组件]]></title><description><![CDATA[ 
  <br><br><br>鸿蒙框架中的文本组件主要用于接收用户输入的信息、呈现的文本内容以及小图标，与其他组件一起共同构建了用户与系统间的交互界面，提升了操作的便捷性与信息展示的直观性。文本组件支持多种属性设置，包括字体大小、颜色和对齐方式等等。<br><br>主要用于显示静态文本。可以使用Text组件配合Span组件创建文本节点，也可以使用属性字符串。  <br><br><br>文本组件，通常用于展示用户视图，如显示文章的文字内容，支持绑定自定义文本选择菜单，用户可根据需要选择不同功能，同时还可以扩展自定义菜单，丰富可用选项，进一步提升用户体验。<br>Text(content?: string | Resource , value?: TextOptions)
@@ -219,7 +503,7 @@ TextInput()
     //绑定通用事件，输入框获焦时触发该回调
     console.info('onFocus is triggering')
   })
-<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.1-文本组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md</guid><pubDate>Mon, 05 May 2025 13:54:27 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505204532824.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505204532824.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.2 按钮组件]]></title><description><![CDATA[ 
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.1-文本组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.1 文本组件.md</guid><pubDate>Mon, 05 May 2025 13:54:27 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505204532824.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505204532824.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.2 按钮组件]]></title><description><![CDATA[ 
  <br><br><br>Button是按钮组件，通常用于响应用户的点击操作，其类型包括胶囊按钮、圆形按钮、普通按钮、圆角矩形按钮。Button做为容器使用时可以通过添加子组件实现包含文字、图片等元素的按钮。<br><br>Button通过调用接口来创建，接口调用有以下两种形式：<br>
 <br>
 通过label和<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-button#buttonoptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-button#buttonoptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" target="_blank">ButtonOptions</a>创建不包含子组件的按钮。以ButtonOptions中的type和stateEffect为例。
@@ -330,7 +614,7 @@ ts 	Button({ type: ButtonType.Circle, stateEffect: true }) { 	  Image($r('app.me
   .onClick(()=&gt;{ 
     console.info('Button onClick') 
   })
-<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.2-按钮组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md</guid><pubDate>Mon, 05 May 2025 13:52:26 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505212050235.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505212050235.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.3 单选框组件]]></title><description><![CDATA[ 
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.2-按钮组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md</guid><pubDate>Mon, 05 May 2025 13:52:26 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505212050235.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505212050235.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.3 单选框组件]]></title><description><![CDATA[ 
  <br><br><br>Radio是单选框组件，通常用于提供相应的用户交互选择项，同一组的Radio中只有一个可以被选中。<br><br>Radio通过调用<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-radio#radiooptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-radio#radiooptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" target="_blank">RadioOptions</a>来创建，以RadioOptions中的value和group为例：<br>Radio(options: {value: string, group: string})
 <br>其中，value是单选框的名称，group是单选框的所属群组名称。checked属性可以设置单选框的状态，状态分别为false和true，设置为true时表示单选框被选中。<br>
 Radio支持设置选中状态和非选中状态的样式。<br>Radio({ value: 'Radio1', group: 'radioGroup' })
@@ -349,7 +633,7 @@ Radio({ value: 'Radio2', group: 'radioGroup' })
         //需要执行的操作
       }
     })
-<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.3-单选框组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.3 单选框组件.md</guid><pubDate>Mon, 05 May 2025 13:52:37 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505214920701.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505214920701.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.4 切换按钮组件]]></title><description><![CDATA[ 
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.3-单选框组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.3 单选框组件.md</guid><pubDate>Mon, 05 May 2025 13:52:37 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505214920701.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505214920701.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.4 切换按钮组件]]></title><description><![CDATA[ 
  <br><br><br>Toggle组件提供状态按钮样式、勾选框样式和开关样式，一般用于两种状态之间的切换。<br><br>Toggle通过调用接口来创建，接口调用形式如下：<br>Toggle(options: { type: ToggleType, isOn?: boolean })
 <br>其中，ToggleType为开关类型，包括Button、Checkbox和Switch，isOn为切换按钮的状态。<br>API version 11开始，Checkbox默认样式由圆角方形变为圆形。<br>接口调用有以下两种形式：<br>
 <br>创建不包含子组件的Toggle<br>
@@ -394,9 +678,8 @@ Toggle({ type: ToggleType.Switch, isOn: true })
         // 需要执行的操作
       }
   })
-<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.4-切换按钮组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.4 切换按钮组件.md</guid><pubDate>Mon, 05 May 2025 14:52:04 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505220649263.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505220649263.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[基础篇]]></title><description><![CDATA[ 
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></description><link>harmonyos\鸿蒙应用开发实训教程.html</link><guid isPermaLink="false">harmonyOS/鸿蒙应用开发实训教程.md</guid><pubDate>Mon, 05 May 2025 14:05:10 GMT</pubDate></item><item><title><![CDATA[<a data-href="鸿蒙应用开发实训教程" href="harmonyos/鸿蒙应用开发实训教程.html" class="internal-link" target="_self" rel="noopener nofollow">鸿蒙应用开发实训教程</a>]]></title><description><![CDATA[ 
- <br><img alt="Pasted image 20250505091733.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505093215916.png" referrerpolicy="no-referrer"><br>]]></description><link>index.html</link><guid isPermaLink="false">Index.md</guid><pubDate>Mon, 05 May 2025 14:46:13 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505093215916.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505093215916.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[鸿蒙应用开发实训教程]]></title><description><![CDATA[ 
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.4-切换按钮组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.4 切换按钮组件.md</guid><pubDate>Mon, 05 May 2025 14:52:04 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505220649263.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505220649263.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[<a data-href="鸿蒙应用开发实训教程" href="harmonyos/鸿蒙应用开发实训教程.html" class="internal-link" target="_self" rel="noopener nofollow">鸿蒙应用开发实训教程</a>]]></title><description><![CDATA[ 
+ <br><img alt="Pasted image 20250505091733.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505093215916.png" referrerpolicy="no-referrer"><br>]]></description><link>index.html</link><guid isPermaLink="false">Index.md</guid><pubDate>Mon, 05 May 2025 14:46:13 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505093215916.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250505093215916.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[鸿蒙应用开发实训教程]]></title><description><![CDATA[ 
  <br><br>《鸿蒙应用开发实训教程》是一本针对高职院校学生编写的数字教材，旨在帮助学生快速掌握鸿蒙（HarmonyOS）应用开发的核心技能。本书以实战为导向，结合丰富的案例和项目，系统介绍鸿蒙操作系统的基础知识、开发工具使用、界面设计、功能实现及多设备协同开发等内容。<br>教材特点：<br>
 <br>项目驱动式学习：采用“任务导向+案例实战”的方式，让学生在完成具体项目的过程中掌握开发技巧，提升实战能力。
 <br>渐进式知识体系：从基础到高级，循序渐进地讲解鸿蒙应用开发的各个关键环节，包括UI设计、事件处理、数据管理等。
