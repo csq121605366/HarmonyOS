@@ -45,6 +45,11 @@
   "defaultMediaIcon": "lucide//file-image",
   "exportPath": "D:\\\\HarmonyOS\\book\\web",
   "filesToExport": [
-    []
+    [
+      "harmonyOS",
+      "meida",
+      "Index.md",
+      "README.md"
+    ]
   ]
 }

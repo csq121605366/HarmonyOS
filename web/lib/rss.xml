@@ -1,144 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 12 May 2025 23:16:47 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 12 May 2025 23:16:41 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
- 布局概述       组件按照布局的要求依次排列，构成应用的页面。在声明式UI中，所有的页面都是由自定义组件构成，开发者可以根据自己的需求，选择合适的布局进行页面开发。    布局指用特定的组件……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\布局概述.html</link><guid isPermaLink="false">harmonyOS/布局/布局概述.md</guid><pubDate>Wed, 07 May 2025 00:03:40 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[层叠布局]]></title><description><![CDATA[ 
- 层叠布局 (Stack)                 概述     层叠布局（StackLayout）用于在屏幕上预留一块区域来显示组件中的元素，提供元素可以重叠的布局。层叠布局通过Stac……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\层叠布局.html</link><guid isPermaLink="false">harmonyOS/布局/层叠布局.md</guid><pubDate>Wed, 07 May 2025 00:04:23 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.5 进度条组件]]></title><description><![CDATA[ 
- <br><br><br>Progress是进度条显示组件，显示内容通常为目标操作的当前进度。<br><br>Progress通过调用接口来创建，接口调用形式如下：<br>Progress(options: {value: number, total?: number, type?: ProgressType})
-<br>其中，value用于设置初始进度值，total用于设置进度总长度，type用于设置Progress样式。<br>Progress({ value: 24, total: 100, type: ProgressType.Linear }) // 创建一个进度总长为100，初始进度值为24的线性进度条
-<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png" referrerpolicy="no-referrer"><br><br>Progress有5种可选类型，通过ProgressType可以设置进度条样式，ProgressType类型包括：线性样式、环形无刻度样式、环形有刻度样式、圆形样式和胶囊样式。<br>
-<br>ProgressType.Linear（线性样式）
-Progress({ value: 20, total: 100, type: ProgressType.Linear }).width(200).height(50)
-Progress({ value: 20, total: 100, type: ProgressType.Linear }).width(50).height(200)
-
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210838615.png" referrerpolicy="no-referrer">
-<br>ProgressType.Ring（环形无刻度样式）
-	// 从左往右，1号环形进度条，默认前景色为蓝色渐变，默认strokeWidth进度条宽度为2.0vp
-Progress({ value: 40, total: 150, type: ProgressType.Ring }).width(100).height(100)
-	// 从左往右，2号环形进度条
-Progress({ value: 40, total: 150, type: ProgressType.Ring }).width(100).height(100).color(Color.Grey).style({ strokeWidth: 15})
-
-<img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210954089.png" referrerpolicy="no-referrer">
-<br>ProgressType.ScaleRing（环形有刻度样式）
-  Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
-    .backgroundColor(Color.Black)
-    .style({ scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条总刻度数为20，刻度宽度为5vp
-Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
-    .backgroundColor(Color.Black)
-    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为5vp
-Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
-    .backgroundColor(Color.Black)
-    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 3 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为3vp
-
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211619653.png" referrerpolicy="no-referrer">
-<br>ProgressType.Eclipse（圆形样式）
-// 从左往右，1号圆形进度条，默认前景色为蓝色
-Progress({ value: 10, total: 150, type: ProgressType.Eclipse }).width(100).height(100)
-// 从左往右，2号圆形进度条，指定前景色为灰色
-Progress({ value: 20, total: 150, type: ProgressType.Eclipse }).color(Color.Grey).width(100).height(100)
-
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211710885.png" referrerpolicy="no-referrer">
-<br>ProgressType.Capsule（胶囊样式）
-Progress({ value: 10, total: 150, type: ProgressType.Capsule }).width(100).height(50)
-Progress({ value: 20, total: 150, type: ProgressType.Capsule }).width(50).height(100).color(Color.Grey)
-Progress({ value: 50, total: 150, type: ProgressType.Capsule }).width(50).height(100).color(Color.Blue).backgroundColor(Color.Black)
-
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211749373.png" referrerpolicy="no-referrer">
-<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.5-进度条组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.5 进度条组件.md</guid><pubDate>Sun, 11 May 2025 13:18:12 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.6 显示图片组件]]></title><description><![CDATA[ 
- <br><br><br>开发者经常需要在应用中显示一些图片，例如：按钮中的icon、网络图片、本地图片等。在应用中显示图片需要使用Image组件实现，Image支持多种图片格式，包括png、jpg、bmp、svg、gif和heif。<br><br>Image组件通过调用接口来创建，接口调用形式如下：<br>Image(src: PixelMap | ResourceStr | DrawableDescriptor)
-<br>该接口通过图片数据源获取图片，支持本地图片和网络图片的渲染展示。其中，src是图片的数据源。<br><br>Image支持加载存档图、多媒体像素图两种类型。<br><br>存档图类型的数据源可以分为本地资源、网络资源、Resource资源、媒体库资源和base64。<br>
-<br>本地资源<br>
-在ets文件夹下创建images文件夹，将本地图片放入。Image组件引入本地图片路径，即可显示图片（注意：根目录为ets文件夹）。
-Image('images/view.jpg')
-
-
-<br>网络资源
-// 实际使用时请替换为真实地址
-Image('https://www.example.com/example.JPG') 
-
-
-<br>Resource资源<br>
-使用资源格式可以跨包/跨模块引入图片，resources文件夹下的图片都可以通过 $r资源接口读取到并转换到Resource格式。<br>
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png" referrerpolicy="no-referrer">
-Image($r('app.media.icon'))
-
-还可以将图片放在rawfile文件夹下。<br>
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084048179.png" referrerpolicy="no-referrer">
-Image($rawfile('example1.png'))
-
-
-<br>媒体库file://data/storage<br>
-支持file://路径前缀的字符串，用于访问通过<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker" target="_blank">选择器</a>提供的图片路径。具体代码如下：
-import { photoAccessHelper } from '@kit.MediaLibraryKit';  
-@Entry  
-@Component  
-struct Index {  
-  @State imgData: string  = ''  
-  
-  getImg() {
-	// 调用选择器模块选取本地媒体库中图片文件
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();  
-    photoPicker.select({  
-      maxSelectNumber:1  
-    }).then((PhotoSelectResult) =&gt; {  
-      this.imgData = PhotoSelectResult.photoUris[0];  
-    })  
-  }  
-  
-  build() {  
-    Column() {  
-      Button('获取图片').onClick((event: ClickEvent) =&gt; {  
-        this.getImg()  
-      })
-      // 从媒体库获取的url格式通常为：'file://media/Photo/test.png'
-      Image(this.imgData).width(200)  
-    }.width('100%').height('100%')  
-  }  
-}
-
-
-<br>base64<br>
-路径格式为data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data]，其中[base64 data]为Base64字符串数据。
-<br><br><br>通过objectFit属性使图片缩放到高度和宽度确定的框内。objectFit的参数类型为枚举值ImageFit，包括Contain、Cover、Auto、Fill、ScaleDown和None。具体效果如下：<br>Image($r('app.media.img_1'))  
-  .width(200)  
-  .height(150)  
-  .border({ width: 1 })  
-    // 保持宽高比进行缩小或者放大，使得图片完全显示在显示边界内。  
-  .objectFit(ImageFit.Contain)
-
-Image($r('app.media.img_1'))  
-  .width(200)  
-  .height(150)  
-  .border({ width: 1 })  
-	// 保持宽高比进行缩小或者放大，使得图片两边都大于或等于显示边界。
-  .objectFit(ImageFit.Cover)
-  
-Image($r('app.media.img_1'))  
-  .width(200)  
-  .height(150)  
-  .border({ width: 1 })  
-    // 自适应显示。
-  .objectFit(ImageFit.Auto)
-  
-Image($r('app.media.img_1'))  
-  .width(200)  
-  .height(150)  
-  .border({ width: 1 })  
-    // 不保持宽高比进行放大缩小，使得图片充满显示边界。
-  .objectFit(ImageFit.Fill)
-
-Image($r('app.media.img_1'))  
-  .width(200)  
-  .height(150)  
-  .border({ width: 1 })  
-    // 保持宽高比显示，图片缩小或者保持不变。 
-  .objectFit(ImageFit.ScaleDown)
-  
-Image($r('app.media.img_1'))  
-  .width(200)  
-  .height(150)  
-  .border({ width: 1 })  
-    // 保持原有尺寸显示。
-  .objectFit(ImageFit.None)
-
-<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.6-显示图片组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.6 显示图片组件.md</guid><pubDate>Sun, 11 May 2025 10:57:04 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.1 视频播放组件]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 13 May 2025 06:29:13 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 13 May 2025 06:29:11 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[7.1 视频播放组件]]></title><description><![CDATA[ 
  <br><br><br>Video组件用于播放视频文件并控制其播放状态，常用于为短视频和应用内部视频的列表页面。当视频完整出现时会自动播放，用户点击视频区域则会暂停播放，同时显示播放进度条，通过拖动播放进度条指定视频播放到具体位置。<br><br>Video通过调用接口来创建，接口调用形式如下：<br>Video(value: VideoOptions)
 <br><br>Video组件支持加载本地视频和网络视频。<br><br>资源：<br>
 <img alt="preview.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" referrerpolicy="no-referrer"><br><br>加载本地视频时，首先在本地rawfile目录指定对应的文件，如下图所示。<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512222605483.png" referrerpolicy="no-referrer"><br>再使用资源访问符$rawfile()引用视频资源。<br>// xxx.ets
@@ -282,7 +142,322 @@ struct Index {
     }  
 	}
 }
-<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.1-视频播放组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md</guid><pubDate>Mon, 12 May 2025 15:09:47 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[基础篇]]></title><description><![CDATA[ 
+<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.1-视频播放组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md</guid><pubDate>Tue, 13 May 2025 06:16:00 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.2 弹窗组件]]></title><description><![CDATA[ 
+ <br><br><br>弹窗一般指打开应用时自动弹出或者用户行为操作时弹出的UI界面，用于短时间内展示用户需关注的信息或待处理的操作。<br><br>根据用户交互操作场景，弹窗可分为模态弹窗和非模态弹窗两种类型，其区别在于用户是否必须对其做出响应。<br>
+<br>模态弹窗：&nbsp;为强交互形式，会中断用户当前的操作流程，要求用户必须做出响应才能继续其他操作，通常用于需要向用户传达重要信息的场景。
+<br>非模态弹窗：&nbsp;为弱交互形式，不会影响用户当前操作行为，用户可以不对其进行回应，通常都有时间限制，出现一段时间后会自动消失。一般用于告诉用户信息内容外还需要用户进行功能操作的场景。
+<br><br><a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-base-dialog-overview" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-base-dialog-overview" target="_blank">弹出框（Dialog）</a>|当需要展示用户当前需要或必须关注的信息内容或操作时，例如二次退出应用等，应优先考虑使用此弹出框。<br>
+<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-popup-and-menu-components-menu" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-popup-and-menu-components-menu" target="_blank">菜单控制（Menu）</a>|当需要给指定的组件绑定用户可执行的操作时，例如长按图标展示操作选项等，应优先考虑使用此弹窗。<br>
+<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-popup-and-menu-components-popup" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-popup-and-menu-components-popup" target="_blank">气泡提示（Popup）</a>|当需要给指定的组件提示时，例如点击一个问号图标弹出一段帮助提示等，应优先考虑使用此弹窗。<br>
+<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-modal-overview" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-modal-overview" target="_blank">绑定模态页面（bindContentCover/bindSheet）</a>|当需要新的界面覆盖在旧的界面上，且旧的界面不消失的一种转场方式时，例如缩略图片点击后查看大图等，应优先考虑使用此弹窗。<br>
+<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-toast" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-toast" target="_blank">即时反馈（Toast）</a>|当需要在一个小的窗口中提供用户当前操作的简单反馈时，例如提示文件保存成功等，应用优先考虑使用此弹窗。<br>
+<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-overlaymanager" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-overlaymanager" target="_blank">设置浮层（OverlayManager）</a>|当需要完全自定义内容、行为、样式时，可以使用浮层将UI展示在页面之上，例如音乐/语音播放悬浮球/胶囊等，应优先考虑使用此弹窗。<br><br>弹出框是一种模态窗口，通常用于在保持当前上下文环境的同时，临时展示用户需关注的信息或待处理的操作。用户需在模态弹出框内完成相关交互任务之后，才能退出模态模式。弹出框可以不与任何组件绑定，其内容通常由多种组件组成，如文本、列表、输入框、图片等，以实现布局。ArkUI当前提供了自定义和固定样式两类弹出框组件。<br>
+<br>自定义弹出框：&nbsp;开发者需要根据使用场景，传入自定义组件填充在弹出框中实现自定义的弹出框内容。主要包括基础自定义弹出框 (CustomDialog)、不依赖UI组件的自定义弹出框 (openCustomDialog)。
+<br>固定样式弹出框：&nbsp;开发者可使用固定样式弹出框，指定需要显示的文本内容和按钮操作，完成简单的交互效果。主要包括警告弹窗 (AlertDialog)、列表选择弹窗 (ActionSheet)、选择器弹窗 (PickerDialog)、对话框 (showDialog)、操作菜单 (showActionMenu)。
+<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.2-弹窗组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.2 弹窗组件.md</guid><pubDate>Tue, 13 May 2025 06:28:45 GMT</pubDate></item><item><title><![CDATA[7.3 组件导航]]></title><description><![CDATA[ 
+ <br><br><br>组件导航（Navigation）主要用于实现页面间以及组件内部的页面跳转，支持在不同组件间传递跳转参数，提供灵活的跳转栈操作，从而更便捷地实现对不同页面的访问和复用。本文将从组件导航（Navigation）的显示模式、路由操作、子页面管理、跨包跳转以及跳转动效等几个方面进行详细介绍。<br><a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation" target="_blank">Navigation</a>是路由导航的根视图容器，一般作为页面（@Entry）的根容器，包括单栏（Stack）、分栏（Split）和自适应（Auto）三种显示模式。Navigation组件适用于模块内和跨模块的路由切换，通过组件级路由能力实现更加自然流畅的转场体验，并提供多种标题栏样式来呈现更好的标题和内容联动效果。一次开发，多端部署场景下，Navigation组件能够自动适配窗口显示大小，在窗口较大的场景下自动切换分栏展示效果。<br>Navigation组件主要包含​导航页和子页。导航页由标题栏（包含菜单栏）、内容区和工具栏组成，可以通过<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation#hidenavbar9" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation#hidenavbar9" target="_blank">hideNavBar</a>属性进行隐藏，导航页不存在页面栈中，与子页，以及子页之间可以通过路由操作进行切换。<br><br>Navigation组件通过mode属性设置页面的显示模式。<br>
+<br>
+自适应模式<br>
+Navigation组件默认为自适应模式，此时mode属性为NavigationMode.Auto。自适应模式下，当页面宽度大于等于一定阈值API version 9及以前：520vp，API version 10及以后：600vp )时，Navigation组件采用分栏模式，反之采用单栏模式。
+Navigation() {
+  // ...
+}
+.mode(NavigationMode.Auto)
+
+
+<br>
+单页面模式<br>
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513142129099.png" referrerpolicy="no-referrer">
+将mode属性设置为NavigationMode.Stack，Navigation组件即可设置为单页面显示模式。
+Navigation() {
+  // ...
+}
+.mode(NavigationMode.Stack)
+
+
+<br><br>Video组件支持加载本地视频和网络视频。<br><br>资源：<br>
+<img alt="preview.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513141524139.png" referrerpolicy="no-referrer"><br><br>加载本地视频时，首先在本地rawfile目录指定对应的文件，如下图所示。<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513141524141.png" referrerpolicy="no-referrer"><br>再使用资源访问符$rawfile()引用视频资源。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private previewUris: Resource = $r('app.media.preview')
+  private innerResource: Resource = $rawfile('videoTest.mp4')
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.innerResource,
+        previewUri: this.previewUris,
+        controller: this.controller
+      })
+    }
+  }
+}
+<br><br>支持file://路径前缀的字符串，用于读取应用沙箱路径内的资源，需要保证应用沙箱目录路径下的文件存在并且有可读权限。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private videoSrc: string = 'file:///data/storage/el2/base/haps/entry/files/show.mp4'
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.videoSrc,
+        controller: this.controller
+      })
+    }
+  }
+}
+<br><br>加载网络视频时，需要申请权限ohos.permission.INTERNET，具体申请方式请参考<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions" target="_blank">声明权限</a>。此时，Video的src属性为网络视频的链接。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private previewUris: Resource = $r('app.media.preview')
+  private videoSrc: string = 'http://vd3.bdstatic.com/mda-merqt9w12asswjse/360p/h264/1622050246127682391/mda-merqt9w12asswjse.mp4' // 使用时请替换为实际视频加载网址
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.videoSrc,
+        previewUri: this.previewUris,
+        controller: this.controller
+      })
+    }
+  }
+}
+<br><br>Video组件<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-media-components-video#%E5%B1%9E%E6%80%A7" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-media-components-video#%E5%B1%9E%E6%80%A7" target="_blank">属性</a>主要用于设置视频的播放形式。例如设置视频播放是否静音、播放是否显示控制条等。<br>// xxx.ets
+@Component
+export struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+
+
+  build() {
+    Column() {
+      Video({
+        controller: this.controller
+      })
+        .muted(false) // 设置是否静音
+        .controls(false) // 设置是否显示默认控制条
+        .autoPlay(false) // 设置是否自动播放
+        .loop(false) // 设置是否循环播放
+        .objectFit(ImageFit.Contain) // 设置视频适配模式
+    }
+  }
+}
+<br><br>Video组件回调事件主要为播放开始、暂停结束、播放失败、播放停止、视频准备和操作进度条等事件，除此之外，Video组件也支持通用事件的调用，如点击、触摸等事件的调用。<br>// xxx.ets
+@Entry
+@Component
+struct VideoPlayer {
+  private controller: VideoController = new VideoController()
+  private previewUris: Resource = $r('app.media.preview')
+  private innerResource: Resource = $rawfile('videoTest.mp4')
+
+
+  build() {
+    Column() {
+      Video({
+        src: this.innerResource,
+        previewUri: this.previewUris,
+        controller: this.controller
+      })
+        .onUpdate((event) =&gt; { // 更新事件回调
+          console.info("Video update.");
+        })
+        .onPrepared((event) =&gt; { // 准备事件回调
+          console.info("Video prepared.");
+        })
+        .onError(() =&gt; { // 失败事件回调
+          console.info("Video error.");
+        })
+        .onStop(() =&gt; { // 停止事件回调
+          console.info("Video stopped.");
+        })
+    }
+  }
+}
+<br><br>Video控制器主要用于控制视频的状态，包括播放、暂停、停止以及设置进度等。<br>首先需要声明控制器<br>controller: VideoController = new VideoController()
+<br>然后利用在Video组件中设置控制器<br>@Entry  
+@Component  
+struct Index {  
+  private controller: VideoController = new VideoController()  
+  private previewUris: Resource = $r('app.media.preview')  
+  private innerResource: Resource = $rawfile('videoTest.mp4')
+  
+  
+  build() {  
+    Column() {  
+      Video({  
+        src: this.innerResource,  
+        previewUri: this.previewUris,  
+        controller: this.controller  
+      })  
+        .width('100%')  
+        .height(600)  
+  
+      Row() {  
+        Button('start').onClick(() =&gt; {  
+          this.controller.start() // 开始播放  
+        }).margin(2)  
+        Button('pause').onClick(() =&gt; {  
+          this.controller.pause() // 暂停播放  
+        }).margin(2)  
+        Button('stop').onClick(() =&gt; {  
+          this.controller.stop() // 结束播放  
+        }).margin(2)  
+        Button('reset').onClick(() =&gt; {  
+          this.controller.reset() // 重置AVPlayer  
+        }).margin(2)  
+        Button('setTime').onClick(() =&gt; {  
+          this.controller.setCurrentTime(10, SeekMode.Accurate) // 精准跳转到视频的10s位置  
+        }).margin(2)  
+      }  
+    }  
+	}
+}
+<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.3-组件导航.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.3 组件导航.md</guid><pubDate>Tue, 13 May 2025 06:23:29 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513142129099.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513142129099.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
+ 布局概述       组件按照布局的要求依次排列，构成应用的页面。在声明式UI中，所有的页面都是由自定义组件构成，开发者可以根据自己的需求，选择合适的布局进行页面开发。    布局指用特定的组件……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\布局概述.html</link><guid isPermaLink="false">harmonyOS/布局/布局概述.md</guid><pubDate>Wed, 07 May 2025 00:03:40 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[层叠布局]]></title><description><![CDATA[ 
+ 层叠布局 (Stack)                 概述     层叠布局（StackLayout）用于在屏幕上预留一块区域来显示组件中的元素，提供元素可以重叠的布局。层叠布局通过Stac……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\层叠布局.html</link><guid isPermaLink="false">harmonyOS/布局/层叠布局.md</guid><pubDate>Wed, 07 May 2025 00:04:23 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.5 进度条组件]]></title><description><![CDATA[ 
+ <br><br><br>Progress是进度条显示组件，显示内容通常为目标操作的当前进度。<br><br>Progress通过调用接口来创建，接口调用形式如下：<br>Progress(options: {value: number, total?: number, type?: ProgressType})
+<br>其中，value用于设置初始进度值，total用于设置进度总长度，type用于设置Progress样式。<br>Progress({ value: 24, total: 100, type: ProgressType.Linear }) // 创建一个进度总长为100，初始进度值为24的线性进度条
+<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png" referrerpolicy="no-referrer"><br><br>Progress有5种可选类型，通过ProgressType可以设置进度条样式，ProgressType类型包括：线性样式、环形无刻度样式、环形有刻度样式、圆形样式和胶囊样式。<br>
+<br>ProgressType.Linear（线性样式）
+Progress({ value: 20, total: 100, type: ProgressType.Linear }).width(200).height(50)
+Progress({ value: 20, total: 100, type: ProgressType.Linear }).width(50).height(200)
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210838615.png" referrerpolicy="no-referrer">
+<br>ProgressType.Ring（环形无刻度样式）
+	// 从左往右，1号环形进度条，默认前景色为蓝色渐变，默认strokeWidth进度条宽度为2.0vp
+Progress({ value: 40, total: 150, type: ProgressType.Ring }).width(100).height(100)
+	// 从左往右，2号环形进度条
+Progress({ value: 40, total: 150, type: ProgressType.Ring }).width(100).height(100).color(Color.Grey).style({ strokeWidth: 15})
+
+<img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210954089.png" referrerpolicy="no-referrer">
+<br>ProgressType.ScaleRing（环形有刻度样式）
+  Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
+    .backgroundColor(Color.Black)
+    .style({ scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条总刻度数为20，刻度宽度为5vp
+Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
+    .backgroundColor(Color.Black)
+    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为5vp
+Progress({ value: 20, total: 150, type: ProgressType.ScaleRing }).width(100).height(100)
+    .backgroundColor(Color.Black)
+    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 3 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为3vp
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211619653.png" referrerpolicy="no-referrer">
+<br>ProgressType.Eclipse（圆形样式）
+// 从左往右，1号圆形进度条，默认前景色为蓝色
+Progress({ value: 10, total: 150, type: ProgressType.Eclipse }).width(100).height(100)
+// 从左往右，2号圆形进度条，指定前景色为灰色
+Progress({ value: 20, total: 150, type: ProgressType.Eclipse }).color(Color.Grey).width(100).height(100)
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211710885.png" referrerpolicy="no-referrer">
+<br>ProgressType.Capsule（胶囊样式）
+Progress({ value: 10, total: 150, type: ProgressType.Capsule }).width(100).height(50)
+Progress({ value: 20, total: 150, type: ProgressType.Capsule }).width(50).height(100).color(Color.Grey)
+Progress({ value: 50, total: 150, type: ProgressType.Capsule }).width(50).height(100).color(Color.Blue).backgroundColor(Color.Black)
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511211749373.png" referrerpolicy="no-referrer">
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.5-进度条组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.5 进度条组件.md</guid><pubDate>Sun, 11 May 2025 13:18:12 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250511210654486.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.6 显示图片组件]]></title><description><![CDATA[ 
+ <br><br><br>开发者经常需要在应用中显示一些图片，例如：按钮中的icon、网络图片、本地图片等。在应用中显示图片需要使用Image组件实现，Image支持多种图片格式，包括png、jpg、bmp、svg、gif和heif。<br><br>Image组件通过调用接口来创建，接口调用形式如下：<br>Image(src: PixelMap | ResourceStr | DrawableDescriptor)
+<br>该接口通过图片数据源获取图片，支持本地图片和网络图片的渲染展示。其中，src是图片的数据源。<br><br>Image支持加载存档图、多媒体像素图两种类型。<br><br>存档图类型的数据源可以分为本地资源、网络资源、Resource资源、媒体库资源和base64。<br>
+<br>本地资源<br>
+在ets文件夹下创建images文件夹，将本地图片放入。Image组件引入本地图片路径，即可显示图片（注意：根目录为ets文件夹）。
+Image('images/view.jpg')
+
+
+<br>网络资源
+// 实际使用时请替换为真实地址
+Image('https://www.example.com/example.JPG') 
+
+
+<br>Resource资源<br>
+使用资源格式可以跨包/跨模块引入图片，resources文件夹下的图片都可以通过 $r资源接口读取到并转换到Resource格式。<br>
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png" referrerpolicy="no-referrer">
+Image($r('app.media.icon'))
+
+还可以将图片放在rawfile文件夹下。<br>
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084048179.png" referrerpolicy="no-referrer">
+Image($rawfile('example1.png'))
+
+
+<br>媒体库file://data/storage<br>
+支持file://路径前缀的字符串，用于访问通过<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker" target="_blank">选择器</a>提供的图片路径。具体代码如下：
+import { photoAccessHelper } from '@kit.MediaLibraryKit';  
+@Entry  
+@Component  
+struct Index {  
+  @State imgData: string  = ''  
+  
+  getImg() {
+	// 调用选择器模块选取本地媒体库中图片文件
+    let photoPicker = new photoAccessHelper.PhotoViewPicker();  
+    photoPicker.select({  
+      maxSelectNumber:1  
+    }).then((PhotoSelectResult) =&gt; {  
+      this.imgData = PhotoSelectResult.photoUris[0];  
+    })  
+  }  
+  
+  build() {  
+    Column() {  
+      Button('获取图片').onClick((event: ClickEvent) =&gt; {  
+        this.getImg()  
+      })
+      // 从媒体库获取的url格式通常为：'file://media/Photo/test.png'
+      Image(this.imgData).width(200)  
+    }.width('100%').height('100%')  
+  }  
+}
+
+
+<br>base64<br>
+路径格式为data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data]，其中[base64 data]为Base64字符串数据。
+<br><br><br>通过objectFit属性使图片缩放到高度和宽度确定的框内。objectFit的参数类型为枚举值ImageFit，包括Contain、Cover、Auto、Fill、ScaleDown和None。具体效果如下：<br>Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 保持宽高比进行缩小或者放大，使得图片完全显示在显示边界内。  
+  .objectFit(ImageFit.Contain)
+
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+	// 保持宽高比进行缩小或者放大，使得图片两边都大于或等于显示边界。
+  .objectFit(ImageFit.Cover)
+  
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 自适应显示。
+  .objectFit(ImageFit.Auto)
+  
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 不保持宽高比进行放大缩小，使得图片充满显示边界。
+  .objectFit(ImageFit.Fill)
+
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 保持宽高比显示，图片缩小或者保持不变。 
+  .objectFit(ImageFit.ScaleDown)
+  
+Image($r('app.media.img_1'))  
+  .width(200)  
+  .height(150)  
+  .border({ width: 1 })  
+    // 保持原有尺寸显示。
+  .objectFit(ImageFit.None)
+
+<br>]]></description><link>harmonyos\进阶篇\第6章-基础组件\6.6-显示图片组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第6章 基础组件/6.6 显示图片组件.md</guid><pubDate>Sun, 11 May 2025 10:57:04 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507084005380.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[基础篇]]></title><description><![CDATA[ 
  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></description><link>harmonyos\鸿蒙应用开发实训教程.html</link><guid isPermaLink="false">harmonyOS/鸿蒙应用开发实训教程.md</guid><pubDate>Wed, 07 May 2025 00:05:41 GMT</pubDate></item><item><title><![CDATA[基础篇]]></title><description><![CDATA[ 
  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>]]></description><link>harmonyos\鸿蒙应用开发实训教程-1.html</link><guid isPermaLink="false">harmonyOS/鸿蒙应用开发实训教程 1.md</guid><pubDate>Wed, 07 May 2025 00:05:41 GMT</pubDate></item><item><title><![CDATA[创建列表 (List)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
  创建列表 (List)                 概述     列表是一种复杂的容器，当列表项达到一定数量，内容超过屏幕大小时，可以自动提供滚动功能。它适合用于呈现同类数据类型或数据类型集……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\列表.html</link><guid isPermaLink="false">harmonyOS/布局/列表.md</guid><pubDate>Mon, 28 Apr 2025 15:56:37 GMT</pubDate><enclosure url="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250428175937.64185603123160245048354299152758:50001231000000:2800:3011D47336F74FF5AB0D90C06BC5D54D189898CEA3569134CA879B19B22404A9.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://alliance-communityfile-drcn.dbankcdn.com/FileServer/getFile/cmtyPub/011/111/111/0000000000011111111.20250428175937.64185603123160245048354299152758:50001231000000:2800:3011D47336F74FF5AB0D90C06BC5D54D189898CEA3569134CA879B19B22404A9.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[弹性布局 (Flex)-构建布局-开发布局-UI开发 (ArkTS声明式开发范式)-ArkUI（方舟UI框架）-应用框架]]></title><description><![CDATA[ 
