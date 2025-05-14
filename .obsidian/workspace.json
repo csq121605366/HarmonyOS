@@ -170,51 +170,15 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "floating": {
-    "id": "7b5023dcefa1ee10",
-    "type": "floating",
-    "children": [
-      {
-        "id": "42f990d0401a229a",
-        "type": "window",
-        "children": [
-          {
-            "id": "c26ea6c3221abc19",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "320313eb64ad687a",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "harmonyOS/进阶篇/第7章 高级组件/固定样式弹出框.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "固定样式弹出框"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 830,
-        "y": 892,
-        "width": 900,
-        "height": 500,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "320313eb64ad687a",
+  "active": "2d3f78401d2bdfba",
   "lastOpenFiles": [
+    "harmonyOS/进阶篇/第7章 高级组件/固定样式弹出框.md",
+    "web/harmonyos/进阶篇/第7章-高级组件/固定样式弹出框.html",
+    "web/harmonyos/进阶篇/第7章-高级组件/弹出框.html",
+    "web/harmonyos/进阶篇/第7章-高级组件/7.2-轮播图组件.html",
     "harmonyOS/进阶篇/第7章 高级组件/弹出框.md",
     "harmonyOS/进阶篇/第7章 高级组件/7.2 轮播图组件.md",
     "harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md",
-    "harmonyOS/进阶篇/第7章 高级组件/固定样式弹出框.md",
     "harmonyOS/进阶篇/第7章 高级组件/7.2 弹窗组件.md",
     "harmonyOS/进阶篇/第7章 高级组件/7.3 组件导航.md",
     "web/harmonyos/进阶篇/第7章-高级组件/7.3-组件导航.html",
@@ -234,9 +198,6 @@
     "harmonyOS/进阶篇/第6章 基础组件/6.5 进度条组件.md",
     "harmonyOS/布局/层叠布局.md",
     "harmonyOS/布局/布局概述.md",
-    "meida/videoTest.mp4",
-    "meida/love.mp4",
-    "meida",
     "harmonyOS/进阶篇/第6章 基础组件/6.4 切换按钮组件.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.2 按钮组件.md",
     "harmonyOS/进阶篇/第6章 基础组件/6.3 单选框组件.md",
@@ -250,7 +211,6 @@
     "harmonyOS/基础篇/第4章 ArkUI框架入门/4.2 资源管理.md",
     "harmonyOS/布局/相对布局.md",
     "harmonyOS/布局/线性布局.md",
-    "harmonyOS/布局/弹性布局.md",
     "harmonyOS/media/Pasted image 20250427223752.png",
     "harmonyOS/media/Pasted image 20250427223835.png",
     "meida/Pasted image 20250505091733.png",
