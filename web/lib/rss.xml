@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 13 May 2025 06:29:13 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 13 May 2025 06:29:11 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[7.1 视频播放组件]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 14 May 2025 01:16:03 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 14 May 2025 01:15:59 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[7.1 视频播放组件]]></title><description><![CDATA[ 
  <br><br><br>Video组件用于播放视频文件并控制其播放状态，常用于为短视频和应用内部视频的列表页面。当视频完整出现时会自动播放，用户点击视频区域则会暂停播放，同时显示播放进度条，通过拖动播放进度条指定视频播放到具体位置。<br><br>Video通过调用接口来创建，接口调用形式如下：<br>Video(value: VideoOptions)
 <br><br>Video组件支持加载本地视频和网络视频。<br><br>资源：<br>
 <img alt="preview.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" referrerpolicy="no-referrer"><br><br>加载本地视频时，首先在本地rawfile目录指定对应的文件，如下图所示。<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512222605483.png" referrerpolicy="no-referrer"><br>再使用资源访问符$rawfile()引用视频资源。<br>// xxx.ets
@@ -142,7 +142,7 @@ struct Index {
     }  
 	}
 }
-<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.1-视频播放组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md</guid><pubDate>Tue, 13 May 2025 06:16:00 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.2 弹窗组件]]></title><description><![CDATA[ 
+<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.1-视频播放组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md</guid><pubDate>Tue, 13 May 2025 13:10:57 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250512230531872.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.2 弹窗组件]]></title><description><![CDATA[ 
  <br><br><br>弹窗一般指打开应用时自动弹出或者用户行为操作时弹出的UI界面，用于短时间内展示用户需关注的信息或待处理的操作。<br><br>根据用户交互操作场景，弹窗可分为模态弹窗和非模态弹窗两种类型，其区别在于用户是否必须对其做出响应。<br>
 <br>模态弹窗：&nbsp;为强交互形式，会中断用户当前的操作流程，要求用户必须做出响应才能继续其他操作，通常用于需要向用户传达重要信息的场景。
 <br>非模态弹窗：&nbsp;为弱交互形式，不会影响用户当前操作行为，用户可以不对其进行回应，通常都有时间限制，出现一段时间后会自动消失。一般用于告诉用户信息内容外还需要用户进行功能操作的场景。
@@ -151,173 +151,461 @@ struct Index {
 <a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-popup-and-menu-components-popup" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-popup-and-menu-components-popup" target="_blank">气泡提示（Popup）</a>|当需要给指定的组件提示时，例如点击一个问号图标弹出一段帮助提示等，应优先考虑使用此弹窗。<br>
 <a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-modal-overview" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-modal-overview" target="_blank">绑定模态页面（bindContentCover/bindSheet）</a>|当需要新的界面覆盖在旧的界面上，且旧的界面不消失的一种转场方式时，例如缩略图片点击后查看大图等，应优先考虑使用此弹窗。<br>
 <a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-toast" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-toast" target="_blank">即时反馈（Toast）</a>|当需要在一个小的窗口中提供用户当前操作的简单反馈时，例如提示文件保存成功等，应用优先考虑使用此弹窗。<br>
-<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-overlaymanager" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-overlaymanager" target="_blank">设置浮层（OverlayManager）</a>|当需要完全自定义内容、行为、样式时，可以使用浮层将UI展示在页面之上，例如音乐/语音播放悬浮球/胶囊等，应优先考虑使用此弹窗。<br><br>弹出框是一种模态窗口，通常用于在保持当前上下文环境的同时，临时展示用户需关注的信息或待处理的操作。用户需在模态弹出框内完成相关交互任务之后，才能退出模态模式。弹出框可以不与任何组件绑定，其内容通常由多种组件组成，如文本、列表、输入框、图片等，以实现布局。ArkUI当前提供了自定义和固定样式两类弹出框组件。<br>
-<br>自定义弹出框：&nbsp;开发者需要根据使用场景，传入自定义组件填充在弹出框中实现自定义的弹出框内容。主要包括基础自定义弹出框 (CustomDialog)、不依赖UI组件的自定义弹出框 (openCustomDialog)。
-<br>固定样式弹出框：&nbsp;开发者可使用固定样式弹出框，指定需要显示的文本内容和按钮操作，完成简单的交互效果。主要包括警告弹窗 (AlertDialog)、列表选择弹窗 (ActionSheet)、选择器弹窗 (PickerDialog)、对话框 (showDialog)、操作菜单 (showActionMenu)。
-<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.2-弹窗组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.2 弹窗组件.md</guid><pubDate>Tue, 13 May 2025 06:28:45 GMT</pubDate></item><item><title><![CDATA[7.3 组件导航]]></title><description><![CDATA[ 
- <br><br><br>组件导航（Navigation）主要用于实现页面间以及组件内部的页面跳转，支持在不同组件间传递跳转参数，提供灵活的跳转栈操作，从而更便捷地实现对不同页面的访问和复用。本文将从组件导航（Navigation）的显示模式、路由操作、子页面管理、跨包跳转以及跳转动效等几个方面进行详细介绍。<br><a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation" target="_blank">Navigation</a>是路由导航的根视图容器，一般作为页面（@Entry）的根容器，包括单栏（Stack）、分栏（Split）和自适应（Auto）三种显示模式。Navigation组件适用于模块内和跨模块的路由切换，通过组件级路由能力实现更加自然流畅的转场体验，并提供多种标题栏样式来呈现更好的标题和内容联动效果。一次开发，多端部署场景下，Navigation组件能够自动适配窗口显示大小，在窗口较大的场景下自动切换分栏展示效果。<br>Navigation组件主要包含​导航页和子页。导航页由标题栏（包含菜单栏）、内容区和工具栏组成，可以通过<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation#hidenavbar9" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-navigation#hidenavbar9" target="_blank">hideNavBar</a>属性进行隐藏，导航页不存在页面栈中，与子页，以及子页之间可以通过路由操作进行切换。<br><br>Navigation组件通过mode属性设置页面的显示模式。<br>
-<br>
-自适应模式<br>
-Navigation组件默认为自适应模式，此时mode属性为NavigationMode.Auto。自适应模式下，当页面宽度大于等于一定阈值API version 9及以前：520vp，API version 10及以后：600vp )时，Navigation组件采用分栏模式，反之采用单栏模式。
-Navigation() {
+<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-overlaymanager" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-create-overlaymanager" target="_blank">设置浮层（OverlayManager）</a>|当需要完全自定义内容、行为、样式时，可以使用浮层将UI展示在页面之上，例如音乐/语音播放悬浮球/胶囊等，应优先考虑使用此弹窗。<br><br><br>CustomDialog是自定义弹出框，可用于广告、中奖、警告、软件更新等与用户交互响应操作。开发者可以通过CustomDialogController类显示自定义弹出框。<br><br>弹出框（CustomDialog）可以通过配置<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" target="_blank">isModal</a>来实现模态和非模态弹窗。isModal为true的时候，弹出框为模态弹窗。isModal为false时，弹出框为非模态弹窗。<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.2-弹窗组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.2 弹窗组件.md</guid><pubDate>Wed, 14 May 2025 00:46:47 GMT</pubDate></item><item><title><![CDATA[7.2 轮播图组件]]></title><description><![CDATA[ 
+ <br><br><br><a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-container-swiper" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-container-swiper" target="_blank">Swiper</a>组件提供滑动轮播显示的能力。Swiper本身是一个容器组件，当设置了多个子组件后，可以对这些子组件进行轮播显示。通常，在一些应用首页显示推荐的内容时，需要用到轮播显示的能力。<br><br>Swiper通过调用接口来创建，接口调用形式如下：<br>Swiper(controller?: SwiperController){
+	// ...
+}
+<br>例如：<br>Swiper() {
+  Text('0')
+    .width('90%')
+    .height('100%')
+    .backgroundColor(Color.Gray)
+    .textAlign(TextAlign.Center)
+    .fontSize(30)
+
+
+  Text('1')
+    .width('90%')
+    .height('100%')
+    .backgroundColor(Color.Green)
+    .textAlign(TextAlign.Center)
+    .fontSize(30)
+
+
+  Text('2')
+    .width('90%')
+    .height('100%')
+    .backgroundColor(Color.Pink)
+    .textAlign(TextAlign.Center)
+    .fontSize(30)
+}
+<br><img alt="0000000000011111111.20250512161400.51918548820845277361388856128651.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211023597.gif" referrerpolicy="no-referrer"><br><br><br>通过loop属性控制是否循环播放，该属性默认值为true。<br>Swiper() {
+	// ...
+}
+.loop(true)
+<br><img alt="0000000000011111111.20250512161400.51918548820845277361388856128651 (1).gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211220021.gif" referrerpolicy="no-referrer"><br><br>接口调用形式如下：<br>autoPlay(value: boolean)
+<br>Swiper通过设置autoPlay属性，控制是否自动轮播子组件。该属性默认值为false。<br>Swiper() {
+	// ...
+}
+.loop(true)
+.autoPlay(true)
+<br>autoPlay为true时，会自动切换播放子组件，子组件与子组件之间的播放间隔通过interval属性设置。interval属性默认值为3000，单位毫秒。<br>interval(value: number)
+<br>Swiper() {
   // ...
 }
-.mode(NavigationMode.Auto)
-
-
-<br>
-单页面模式<br>
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513142129099.png" referrerpolicy="no-referrer">
-将mode属性设置为NavigationMode.Stack，Navigation组件即可设置为单页面显示模式。
-Navigation() {
+.loop(true)
+.autoPlay(true)
+.interval(1000)
+<br><img alt="0000000000011111111.20250512161400.09231714490524573239492668518479.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211553202.gif" referrerpolicy="no-referrer"><br><br>Swiper提供了默认的导航点样式和导航点箭头样式，导航点默认显示在Swiper下方居中位置，开发者也可以通过indicator属性自定义导航点的位置和样式。接口调用形式如下：<br>indicator(value: DotIndicator | DigitIndicator | boolean)
+<br>通过indicator属性，开发者可以设置导航点相对于Swiper组件上下左右四个方位的位置，同时也可以设置每个导航点的尺寸、颜色、蒙层和被选中导航点的颜色。<br>
+<br>例1：
+<br>Swiper() {
   // ...
 }
-.mode(NavigationMode.Stack)
+.indicator(
+  Indicator.dot()
+	.left(0)
+	.itemWidth(15)
+	.itemHeight(15)
+	.selectedItemWidth(30)
+	.selectedItemHeight(15)
+	.color(Color.Red)
+	.selectedColor(Color.Blue)
+)
+<br><img alt="0000000000011111111.20250512161400.69342664773004355540471489236135.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211724072.png" referrerpolicy="no-referrer"><br><br>Swiper通过设置<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-container-swiper#displayarrow10" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-container-swiper#displayarrow10" target="_blank">displayArrow</a>属性，可以控制导航点箭头的大小、位置、颜色，底板的大小及颜色，以及鼠标悬停时是否显示箭头。接口调用形式如下：<br>displayArrow(value: ArrowStyle | boolean, isHoverShow?: boolean)
+<br>例1： <br>Swiper() {
+  // ...
+}
+.displayArrow(true, false)
+<br><img alt="0000000000011111111.20250512161400.44632579204204550572531037509527.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211940282.gif" referrerpolicy="no-referrer"><br>例2：<br>箭头显示在组件两侧，大小为18vp，导航点箭头颜色设为蓝色。<br>Swiper() {
+  // ...
+}
+.displayArrow({ 
+  showBackground: true,
+  isSidebarMiddle: true,
+  backgroundSize: 24,
+  backgroundColor: Color.White,
+  arrowSize: 18,
+  arrowColor: Color.Blue
+  }, false)
+<br><img alt="0000000000011111111.20250512161400.48955810711757980673036990982013.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513212334712.gif" referrerpolicy="no-referrer"><br><br>Swiper支持手指滑动、点击导航点和通过控制器三种方式切换页面，以下示例展示通过控制器切换页面的方法。<br>
+<br>首先创建控制器
+swiperController: SwiperController = new SwiperController();
 
 
-<br><br>Video组件支持加载本地视频和网络视频。<br><br>资源：<br>
-<img alt="preview.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513141524139.png" referrerpolicy="no-referrer"><br><br>加载本地视频时，首先在本地rawfile目录指定对应的文件，如下图所示。<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513141524141.png" referrerpolicy="no-referrer"><br>再使用资源访问符$rawfile()引用视频资源。<br>// xxx.ets
-@Component
-export struct VideoPlayer {
-  private controller: VideoController = new VideoController()
-  private previewUris: Resource = $r('app.media.preview')
-  private innerResource: Resource = $rawfile('videoTest.mp4')
+<br>将控制器应用到Swiper组件中
+   Swiper(this.swiperController){
+	   // ...
+   }
+
+
+<br>使用控制器控制页面跳转
+Row({space:20}){  
+  Button('showNext').onClick((event: ClickEvent) =&gt; {  
+    this.swiperController.showNext(); // 通过controller切换到后一页  
+  })  
+  
+  Button('showPrevious').onClick((event: ClickEvent) =&gt; {  
+    this.swiperController.showPrevious(); // 通过controller切换到前一页  
+  })  
+}
+
+
+<br><br>Swiper支持水平和垂直方向上进行轮播，主要通过vertical属性控制。接口调用形式如下：<br>vertical(value: boolean)
+<br>当vertical为true时，表示在垂直方向上进行轮播；为false时，表示在水平方向上进行轮播。vertical默认值为false。<br>Swiper() {
+  // ...
+}
+.indicator(true)
+.vertical(false)  
+<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513213855840.png" referrerpolicy="no-referrer"><br>Swiper() {
+  // ...
+}
+.indicator(true)
+.vertical(true)
+<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.2-轮播图组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.2 轮播图组件.md</guid><pubDate>Tue, 13 May 2025 13:39:18 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211023597.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211023597.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[弹出框]]></title><description><![CDATA[ 
+ <br><br><br><br>CustomDialog是自定义弹出框，可用于广告、中奖、警告、软件更新等与用户交互响应操作。开发者可以通过CustomDialogController类显示自定义弹出框。<br><br>
+<br>使用@CustomDialog装饰器装饰自定义弹出框，可在此装饰器内自定义弹出框内容。CustomDialogController需在@Component内定义。
+<br>@CustomDialog
+struct CustomDialogExample {
+  controller: CustomDialogController
 
 
   build() {
     Column() {
-      Video({
-        src: this.innerResource,
-        previewUri: this.previewUris,
-        controller: this.controller
-      })
-    }
+      Text('我是内容')
+        .fontSize(20)
+    }.height(60).justifyContent(FlexAlign.Center)
   }
 }
-<br><br>支持file://路径前缀的字符串，用于读取应用沙箱路径内的资源，需要保证应用沙箱目录路径下的文件存在并且有可读权限。<br>// xxx.ets
+<br>
+<br>创建构造器，与装饰器呼应相连。
+<br> @Entry
+ @Component
+ struct CustomDialogUser {
+   dialogController: CustomDialogController = new CustomDialogController({
+     builder: CustomDialogExample(),
+   })
+ }
+<br>
+<br>点击与onClick事件绑定的组件使弹出框弹出。
+<br>@Entry
 @Component
-export struct VideoPlayer {
-  private controller: VideoController = new VideoController()
-  private videoSrc: string = 'file:///data/storage/el2/base/haps/entry/files/show.mp4'
+struct CustomDialogUser {
+  dialogController: CustomDialogController = new CustomDialogController({
+    builder: CustomDialogExample(),
+  })
 
 
   build() {
     Column() {
-      Video({
-        src: this.videoSrc,
-        controller: this.controller
-      })
-    }
+      Button('click me')
+        .onClick(() =&gt; {
+          this.dialogController.open();
+        })
+    }.width('100%').margin({ top: 5 })
   }
 }
-<br><br>加载网络视频时，需要申请权限ohos.permission.INTERNET，具体申请方式请参考<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions" target="_blank">声明权限</a>。此时，Video的src属性为网络视频的链接。<br>// xxx.ets
-@Component
-export struct VideoPlayer {
-  private controller: VideoController = new VideoController()
-  private previewUris: Resource = $r('app.media.preview')
-  private videoSrc: string = 'http://vd3.bdstatic.com/mda-merqt9w12asswjse/360p/h264/1622050246127682391/mda-merqt9w12asswjse.mp4' // 使用时请替换为实际视频加载网址
+<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png" referrerpolicy="no-referrer"><br><br>弹出框可用于数据交互，完成用户一系列响应操作。<br>
+<br>
+在@CustomDialog装饰器内添加按钮，同时添加数据函数。
+@CustomDialog
+struct CustomDialogExample {
+  cancel: () =&gt; void = () =&gt; {}
+  confirm: () =&gt; void = () =&gt; {}
+  controller: CustomDialogController;
 
 
   build() {
     Column() {
-      Video({
-        src: this.videoSrc,
-        previewUri: this.previewUris,
-        controller: this.controller
-      })
+      Text('我是内容').fontSize(20).margin({ top: 10, bottom: 10 })
+      Flex({ justifyContent: FlexAlign.SpaceAround }) {
+        Button('cancel')
+          .onClick(() =&gt; {
+            this.controller.close();
+            if (this.cancel) {
+              this.cancel();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Black)
+        Button('confirm')
+          .onClick(() =&gt; {
+            this.controller.close();
+            if (this.confirm) {
+              this.confirm();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Red)
+      }.margin({ bottom: 10 })
     }
   }
 }
-<br><br>Video组件<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-media-components-video#%E5%B1%9E%E6%80%A7" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-media-components-video#%E5%B1%9E%E6%80%A7" target="_blank">属性</a>主要用于设置视频的播放形式。例如设置视频播放是否静音、播放是否显示控制条等。<br>// xxx.ets
-@Component
-export struct VideoPlayer {
-  private controller: VideoController = new VideoController()
 
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085348889.png" referrerpolicy="no-referrer">
 
-  build() {
-    Column() {
-      Video({
-        controller: this.controller
-      })
-        .muted(false) // 设置是否静音
-        .controls(false) // 设置是否显示默认控制条
-        .autoPlay(false) // 设置是否自动播放
-        .loop(false) // 设置是否循环播放
-        .objectFit(ImageFit.Contain) // 设置视频适配模式
-    }
-  }
-}
-<br><br>Video组件回调事件主要为播放开始、暂停结束、播放失败、播放停止、视频准备和操作进度条等事件，除此之外，Video组件也支持通用事件的调用，如点击、触摸等事件的调用。<br>// xxx.ets
+<br>
+页面内需要在构造器内进行接收，同时创建相应的函数操作。
 @Entry
 @Component
-struct VideoPlayer {
-  private controller: VideoController = new VideoController()
-  private previewUris: Resource = $r('app.media.preview')
-  private innerResource: Resource = $rawfile('videoTest.mp4')
+struct CustomDialogUser {
+  dialogController: CustomDialogController = new CustomDialogController({
+    builder: CustomDialogExample({
+      cancel: ()=&gt; { this.onCancel() },
+      confirm: ()=&gt; { this.onAccept() },
+    }),
+  });
+
+
+  onCancel() {
+    console.info('Callback when the first button is clicked');
+  }
+
+
+  onAccept() {
+    console.info('Callback when the second button is clicked');
+  }
 
 
   build() {
     Column() {
-      Video({
-        src: this.innerResource,
-        previewUri: this.previewUris,
-        controller: this.controller
-      })
-        .onUpdate((event) =&gt; { // 更新事件回调
-          console.info("Video update.");
+      Button('click me')
+        .onClick(() =&gt; {
+          this.dialogController.open();
         })
-        .onPrepared((event) =&gt; { // 准备事件回调
-          console.info("Video prepared.");
-        })
-        .onError(() =&gt; { // 失败事件回调
-          console.info("Video error.");
-        })
-        .onStop(() =&gt; { // 停止事件回调
-          console.info("Video stopped.");
-        })
-    }
+    }.width('100%').margin({ top: 5 })
   }
 }
-<br><br>Video控制器主要用于控制视频的状态，包括播放、暂停、停止以及设置进度等。<br>首先需要声明控制器<br>controller: VideoController = new VideoController()
-<br>然后利用在Video组件中设置控制器<br>@Entry  
-@Component  
-struct Index {  
-  private controller: VideoController = new VideoController()  
-  private previewUris: Resource = $r('app.media.preview')  
-  private innerResource: Resource = $rawfile('videoTest.mp4')
-  
-  
-  build() {  
-    Column() {  
-      Video({  
-        src: this.innerResource,  
-        previewUri: this.previewUris,  
-        controller: this.controller  
-      })  
-        .width('100%')  
-        .height(600)  
-  
-      Row() {  
-        Button('start').onClick(() =&gt; {  
-          this.controller.start() // 开始播放  
-        }).margin(2)  
-        Button('pause').onClick(() =&gt; {  
-          this.controller.pause() // 暂停播放  
-        }).margin(2)  
-        Button('stop').onClick(() =&gt; {  
-          this.controller.stop() // 结束播放  
-        }).margin(2)  
-        Button('reset').onClick(() =&gt; {  
-          this.controller.reset() // 重置AVPlayer  
-        }).margin(2)  
-        Button('setTime').onClick(() =&gt; {  
-          this.controller.setCurrentTime(10, SeekMode.Accurate) // 精准跳转到视频的10s位置  
-        }).margin(2)  
-      }  
-    }  
-	}
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085312742.png" referrerpolicy="no-referrer">
+
+<br>
+可通过弹出框中的按钮实现路由跳转，同时获取跳转页面向当前页传入的参数。
+// Index.ets
+@CustomDialog
+struct CustomDialogExample {
+  @Link textValue: string;
+  controller?: CustomDialogController;
+  cancel: () =&gt; void = () =&gt; {
+  }
+  confirm: () =&gt; void = () =&gt; {
+  }
+
+
+  build() {
+    Column({ space: 20 }) {
+      if (this.textValue != '') {
+        Text(`第二个页面的内容为：${this.textValue}`)
+          .fontSize(20)
+      } else {
+        Text('是否获取第二个页面的内容')
+          .fontSize(20)
+      }
+      Flex({ justifyContent: FlexAlign.SpaceAround }) {
+        Button('cancel')
+          .onClick(() =&gt; {
+            if (this.controller != undefined) {
+              this.controller.close();
+              this.cancel();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Black)
+        Button('confirm')
+          .onClick(() =&gt; {
+            if (this.controller != undefined &amp;&amp; this.textValue != '') {
+              this.controller.close();
+            } else if (this.controller != undefined) {
+              this.getUIContext().getRouter().pushUrl({
+                url: 'pages/Index2'
+              });
+              this.controller.close();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Red)
+      }.margin({ bottom: 10 })
+    }.borderRadius(10).padding({ top: 20 })
+  }
 }
-<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.3-组件导航.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.3 组件导航.md</guid><pubDate>Tue, 13 May 2025 06:23:29 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513142129099.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513142129099.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
+
+
+@Entry
+@Component
+struct CustomDialogUser {
+  @State textValue: string = '';
+  dialogController: CustomDialogController | null = new CustomDialogController({
+    builder: CustomDialogExample({
+      cancel: () =&gt; {
+        this.onCancel()
+      },
+      confirm: () =&gt; {
+        this.onAccept()
+      },
+      textValue: this.textValue
+    })
+  });
+
+
+  // 在自定义组件即将析构销毁时将dialogController置空
+  aboutToDisappear() {
+    this.dialogController = null; // 将dialogController置空
+  }
+
+
+  onPageShow() {
+    const params = this.getUIContext().getRouter().getParams() as Record&lt;string, string&gt;; // 获取传递过来的参数对象
+    if (params) {
+      this.dialogController?.open();
+      this.textValue = params.info as string; // 获取info属性的值
+    }
+  }
+
+
+  onCancel() {
+    console.info('Callback when the first button is clicked');
+  }
+
+
+  onAccept() {
+    console.info('Callback when the second button is clicked');
+  }
+
+
+  exitApp() {
+    console.info('Click the callback in the blank area');
+  }
+
+
+  build() {
+    Column() {
+      Button('click me')
+        .onClick(() =&gt; {
+          if (this.dialogController != null) {
+            this.dialogController.open();
+          }
+        }).backgroundColor(0x317aff)
+    }.width('100%').margin({ top: 5 })
+  }
+}
+
+// Index2.ets
+@Entry
+@Component
+struct Index2 {
+  @State message: string = '点击返回';
+
+
+  build() {
+    Column() {
+      Button(this.message)
+        .type(ButtonType.Capsule)
+        .onClick(() =&gt; {
+           this.getUIContext().getRouter().back({
+             url: 'pages/Index',
+             params: {
+             info: 'Hello World'
+           }
+        });
+      })
+    }.width('100%').height('100%').margin({ top: 20 })
+  }
+}
+
+<img alt="0000000000011111111.20250512161414.79394937189607421237077974172139.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085243593.gif" referrerpolicy="no-referrer">
+
+<br>弹出框（CustomDialog）可以通过配置<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" target="_blank">isModal</a>来实现模态和非模态弹窗。isModal为true的时候，弹出框为模态弹窗。isModal为false时，弹出框为非模态弹窗。<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\弹出框.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/弹出框.md</guid><pubDate>Wed, 14 May 2025 00:54:29 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[固定样式弹出框]]></title><description><![CDATA[ 
+ <br><br><br>固定样式弹出框采用固定的布局格式，这使得开发者无需关心具体的显示布局细节，只需输入所需显示的文本内容，从而简化了使用流程，提升了便捷性。<br><br><br>操作菜单通过UIContext中的getPromptAction方法获取到PromptAction对象，再通过该对象调用<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showactionmenu11" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showactionmenu11" target="_blank">showActionMenu</a>接口实现，支持在回调或开发者自定义类中使用。接口调用形式如下：<br>let uiContext = this.getUIContext();
+let promptAction: PromptAction = uiContext.getPromptAction();
+promptAction.showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions)
+<br>例如：<br>import { PromptAction } from '@kit.ArkUI';
+
+
+let uiContext = this.getUIContext();
+let promptAction: PromptAction = uiContext.getPromptAction();
+
+promptAction.showActionMenu({
+	title: 'showActionMenu Title Info',
+	buttons: [
+	  {
+		text: 'item1',
+		color: '#666666'
+	  },
+	  {
+		text: 'item2',
+		color: '#000000'
+	  },
+	]
+})
+.then(data =&gt; {
+  console.info('showActionMenu success, click button: ' + data.index);
+})
+.catch((err: Error) =&gt; {
+  console.error('showActionMenu error: ' + err);
+})
+
+<br><img alt="0000000000011111111.20250512161414.17054361210157935908638243850242.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514091012194.gif" referrerpolicy="no-referrer"><br><br><br>对话框通过UIContext中的getPromptAction方法获取到PromptAction对象，再通过该对象调用<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showdialog" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showdialog" target="_blank">showDialog</a>接口实现，支持在回调或开发者自定义类中使用。接口调用形式如下：<br>let uiContext = this.getUIContext();
+let promptAction: PromptAction = uiContext.getPromptAction();
+
+promptAction.showDialog(options: promptAction.ShowDialogOptions)
+<br>例子：<br>// xxx.ets
+import { PromptAction } from '@kit.ArkUI';
+
+
+let uiContext = this.getUIContext();
+let promptAction: PromptAction = uiContext.getPromptAction();
+try {
+  promptAction.showDialog({
+    title: 'showDialog Title Info',
+    message: 'Message Info',
+    buttons: [
+      {
+        text: 'button1',
+        color: '#000000'
+      },
+      {
+        text: 'button2',
+        color: '#000000'
+      }
+    ]
+  }, (err, data) =&gt; {
+    if (err) {
+      console.error('showDialog err: ' + err);
+      return;
+    }
+    console.info('showDialog success callback, click button: ' + data.index);
+  });
+} catch (error) {
+}
+<br><img alt="0000000000011111111.20250512161414.85317692609959635609279562607822.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514091218022.gif" referrerpolicy="no-referrer"><br><br><br>日历选择器弹窗提供日历视图，包含年、月和星期信息，通过<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-calendarpicker-dialog" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-calendarpicker-dialog" target="_blank">CalendarPickerDialog</a>接口实现。开发者可调用show函数，定义并弹出日历选择器弹窗。接口调用形式如下：<br>CalendarPickerDialog.show(options?: CalendarDialogOptions)
+<br>例子：<br>// xxx.ets
+@Entry
+@Component
+struct CalendarPickerDialogExample {
+  private selectedDate: Date = new Date('2024-04-23');
+
+  build() {
+    Column() {
+      Button("Show CalendarPicker Dialog")
+        .margin(20)
+        .onClick(() =&gt; {
+          console.info("CalendarDialog.show")
+          CalendarPickerDialog.show({
+            selected: this.selectedDate,
+            acceptButtonStyle: {
+              fontColor: '#2787d9',
+              fontSize: '16fp',
+              backgroundColor: '#f7f7f7',
+              borderRadius: 10
+            },
+            cancelButtonStyle: {
+              fontColor: Color.Red,
+              fontSize: '16fp',
+              backgroundColor: '#f7f7f7',
+              borderRadius: 10
+            },
+            onAccept: (date: Date)=&gt;{
+              // 当弹出框再次弹出时显示选中的是上一次确定的日期
+              this.selectedDate = date;
+            }
+          })
+        })
+    }.width('100%')
+  }
+}
+<br><img alt="0000000000011111111.20250512161414.11829730918056433774027851967877.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514091535559.gif" referrerpolicy="no-referrer">]]></description><link>harmonyos\进阶篇\第7章-高级组件\固定样式弹出框.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/固定样式弹出框.md</guid><pubDate>Wed, 14 May 2025 01:15:36 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514091012194.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514091012194.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
  布局概述       组件按照布局的要求依次排列，构成应用的页面。在声明式UI中，所有的页面都是由自定义组件构成，开发者可以根据自己的需求，选择合适的布局进行页面开发。    布局指用特定的组件……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\布局概述.html</link><guid isPermaLink="false">harmonyOS/布局/布局概述.md</guid><pubDate>Wed, 07 May 2025 00:03:40 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[层叠布局]]></title><description><![CDATA[ 
  层叠布局 (Stack)                 概述     层叠布局（StackLayout）用于在屏幕上预留一块区域来显示组件中的元素，提供元素可以重叠的布局。层叠布局通过Stac……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\层叠布局.html</link><guid isPermaLink="false">harmonyOS/布局/层叠布局.md</guid><pubDate>Wed, 07 May 2025 00:04:23 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.5 进度条组件]]></title><description><![CDATA[ 
  <br><br><br>Progress是进度条显示组件，显示内容通常为目标操作的当前进度。<br><br>Progress通过调用接口来创建，接口调用形式如下：<br>Progress(options: {value: number, total?: number, type?: ProgressType})
