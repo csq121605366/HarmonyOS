@@ -1,4 +1,262 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 14 May 2025 06:29:18 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 14 May 2025 06:29:16 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[固定样式弹出框]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[book]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>book</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 18 May 2025 15:09:46 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 18 May 2025 15:09:45 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[基础自定义弹出框]]></title><description><![CDATA[ 
+ <br><br><br>CustomDialog是自定义弹出框，可用于广告、中奖、警告、软件更新等与用户交互响应操作。开发者可以通过CustomDialogController类显示自定义弹出框。<br><br>
+<br>使用@CustomDialog装饰器装饰自定义弹出框，可在此装饰器内自定义弹出框内容。CustomDialogController需在@Component内定义。
+<br>@CustomDialog
+struct CustomDialogExample {
+  controller: CustomDialogController
+
+
+  build() {
+    Column() {
+      Text('我是内容')
+        .fontSize(20)
+    }.height(60).justifyContent(FlexAlign.Center)
+  }
+}
+<br>
+<br>创建构造器，与装饰器呼应相连。
+<br> @Entry
+ @Component
+ struct CustomDialogUser {
+   dialogController: CustomDialogController = new CustomDialogController({
+     builder: CustomDialogExample(),
+   })
+ }
+<br>
+<br>点击与onClick事件绑定的组件使弹出框弹出。
+<br>@Entry
+@Component
+struct CustomDialogUser {
+  dialogController: CustomDialogController = new CustomDialogController({
+    builder: CustomDialogExample(),
+  })
+
+
+  build() {
+    Column() {
+      Button('click me')
+        .onClick(() =&gt; {
+          this.dialogController.open();
+        })
+    }.width('100%').margin({ top: 5 })
+  }
+}
+<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png" referrerpolicy="no-referrer"><br><br>弹出框可用于数据交互，完成用户一系列响应操作。<br>
+<br>
+在@CustomDialog装饰器内添加按钮，同时添加数据函数。
+@CustomDialog
+struct CustomDialogExample {
+  cancel: () =&gt; void = () =&gt; {}
+  confirm: () =&gt; void = () =&gt; {}
+  controller: CustomDialogController;
+
+
+  build() {
+    Column() {
+      Text('我是内容').fontSize(20).margin({ top: 10, bottom: 10 })
+      Flex({ justifyContent: FlexAlign.SpaceAround }) {
+        Button('cancel')
+          .onClick(() =&gt; {
+            this.controller.close();
+            if (this.cancel) {
+              this.cancel();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Black)
+        Button('confirm')
+          .onClick(() =&gt; {
+            this.controller.close();
+            if (this.confirm) {
+              this.confirm();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Red)
+      }.margin({ bottom: 10 })
+    }
+  }
+}
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085348889.png" referrerpolicy="no-referrer">
+
+<br>
+页面内需要在构造器内进行接收，同时创建相应的函数操作。
+@Entry
+@Component
+struct CustomDialogUser {
+  dialogController: CustomDialogController = new CustomDialogController({
+    builder: CustomDialogExample({
+      cancel: ()=&gt; { this.onCancel() },
+      confirm: ()=&gt; { this.onAccept() },
+    }),
+  });
+
+
+  onCancel() {
+    console.info('Callback when the first button is clicked');
+  }
+
+
+  onAccept() {
+    console.info('Callback when the second button is clicked');
+  }
+
+
+  build() {
+    Column() {
+      Button('click me')
+        .onClick(() =&gt; {
+          this.dialogController.open();
+        })
+    }.width('100%').margin({ top: 5 })
+  }
+}
+
+<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085312742.png" referrerpolicy="no-referrer">
+
+<br>
+可通过弹出框中的按钮实现路由跳转，同时获取跳转页面向当前页传入的参数。
+// Index.ets
+@CustomDialog
+struct CustomDialogExample {
+  @Link textValue: string;
+  controller?: CustomDialogController;
+  cancel: () =&gt; void = () =&gt; {
+  }
+  confirm: () =&gt; void = () =&gt; {
+  }
+
+
+  build() {
+    Column({ space: 20 }) {
+      if (this.textValue != '') {
+        Text(`第二个页面的内容为：${this.textValue}`)
+          .fontSize(20)
+      } else {
+        Text('是否获取第二个页面的内容')
+          .fontSize(20)
+      }
+      Flex({ justifyContent: FlexAlign.SpaceAround }) {
+        Button('cancel')
+          .onClick(() =&gt; {
+            if (this.controller != undefined) {
+              this.controller.close();
+              this.cancel();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Black)
+        Button('confirm')
+          .onClick(() =&gt; {
+            if (this.controller != undefined &amp;&amp; this.textValue != '') {
+              this.controller.close();
+            } else if (this.controller != undefined) {
+              this.getUIContext().getRouter().pushUrl({
+                url: 'pages/Index2'
+              });
+              this.controller.close();
+            }
+          }).backgroundColor(0xffffff).fontColor(Color.Red)
+      }.margin({ bottom: 10 })
+    }.borderRadius(10).padding({ top: 20 })
+  }
+}
+
+
+@Entry
+@Component
+struct CustomDialogUser {
+  @State textValue: string = '';
+  dialogController: CustomDialogController | null = new CustomDialogController({
+    builder: CustomDialogExample({
+      cancel: () =&gt; {
+        this.onCancel()
+      },
+      confirm: () =&gt; {
+        this.onAccept()
+      },
+      textValue: this.textValue
+    })
+  });
+
+
+  // 在自定义组件即将析构销毁时将dialogController置空
+  aboutToDisappear() {
+    this.dialogController = null; // 将dialogController置空
+  }
+
+
+  onPageShow() {
+    const params = this.getUIContext().getRouter().getParams() as Record&lt;string, string&gt;; // 获取传递过来的参数对象
+    if (params) {
+      this.dialogController?.open();
+      this.textValue = params.info as string; // 获取info属性的值
+    }
+  }
+
+
+  onCancel() {
+    console.info('Callback when the first button is clicked');
+  }
+
+
+  onAccept() {
+    console.info('Callback when the second button is clicked');
+  }
+
+
+  exitApp() {
+    console.info('Click the callback in the blank area');
+  }
+
+
+  build() {
+    Column() {
+      Button('click me')
+        .onClick(() =&gt; {
+          if (this.dialogController != null) {
+            this.dialogController.open();
+          }
+        }).backgroundColor(0x317aff)
+    }.width('100%').margin({ top: 5 })
+  }
+}
+
+// Index2.ets
+@Entry
+@Component
+struct Index2 {
+  @State message: string = '点击返回';
+
+
+  build() {
+    Column() {
+      Button(this.message)
+        .type(ButtonType.Capsule)
+        .onClick(() =&gt; {
+           this.getUIContext().getRouter().back({
+             url: 'pages/Index',
+             params: {
+             info: 'Hello World'
+           }
+        });
+      })
+    }.width('100%').height('100%').margin({ top: 20 })
+  }
+}
+
+<img alt="0000000000011111111.20250512161414.79394937189607421237077974172139.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085243593.gif" referrerpolicy="no-referrer">
+
+<br>弹出框（CustomDialog）可以通过配置<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" target="_blank">isModal</a>来实现模态和非模态弹窗。isModal为true的时候，弹出框为模态弹窗。isModal为false时，弹出框为非模态弹窗。<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\基础自定义弹出框.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/基础自定义弹出框.md</guid><pubDate>Sun, 18 May 2025 14:19:14 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[即时反馈组件]]></title><description><![CDATA[ 
+ <br><br><br>即时反馈（Toast）是一种临时性的消息提示框，用于向用户显示简短的操作反馈或状态信息。​它通常在屏幕的底部或顶部短暂弹出，随后在一段时间后自动消失。即时反馈的主要目的是提供简洁、不打扰的信息反馈，避免干扰用户当前的操作流程。<br><br>可以通过使用<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#uicontext" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#uicontext" target="_blank">UIContext</a>中的<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#getpromptaction" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#getpromptaction" target="_blank">getPromptAction</a>方法获取当前UI上下文关联的<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#promptaction" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#promptaction" target="_blank">PromptAction</a>对象，再通过该对象调用<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showtoast" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showtoast" target="_blank">showToast</a>创建并显示文本提示框。接口调用形式如下：<br>let uiContext = this.getUIContext();
+let promptAction: PromptAction = uiContext.getPromptAction();
+promptAction.showToast(options: promptAction.ShowToastOptions)
+<br>例如：<br>Column(){  
+  Button('Show toast').onClick((event: ClickEvent) =&gt; {  
+      let uiContext = this.getUIContext();  
+      let promptAction: PromptAction = uiContext.getPromptAction();  
+      promptAction.showToast({  
+        message:'Hello World',  
+        duration:2000  
+      })  
+  })  
+}.height('100%').width('100%').justifyContent(FlexAlign.Center)
+<br><img alt="0000000000011111111.20250516130627.69391167679378294439220070392654.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250518222804968.gif" referrerpolicy="no-referrer"><br><br><br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\即时反馈组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/即时反馈组件.md</guid><pubDate>Sun, 18 May 2025 14:31:13 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250518222804968.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250518222804968.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[固定样式弹出框]]></title><description><![CDATA[ 
  <br><br><br>固定样式弹出框采用固定的布局格式，这使得开发者无需关心具体的显示布局细节，只需输入所需显示的文本内容，从而简化了使用流程，提升了便捷性。<br><br>操作菜单通过UIContext中的getPromptAction方法获取到PromptAction对象，再通过该对象调用<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showactionmenu11" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-uicontext#showactionmenu11" target="_blank">showActionMenu</a>接口实现，支持在回调或开发者自定义类中使用。接口调用形式如下：<br>let uiContext = this.getUIContext();
 let promptAction: PromptAction = uiContext.getPromptAction();
 promptAction.showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions)
@@ -580,251 +838,7 @@ Row({space:20}){
 }
 .indicator(true)
 .vertical(true)
-<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.2-轮播图组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.2 轮播图组件.md</guid><pubDate>Tue, 13 May 2025 13:39:18 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211023597.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211023597.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[弹出框]]></title><description><![CDATA[ 
- <br><br><br><br>CustomDialog是自定义弹出框，可用于广告、中奖、警告、软件更新等与用户交互响应操作。开发者可以通过CustomDialogController类显示自定义弹出框。<br><br>
-<br>使用@CustomDialog装饰器装饰自定义弹出框，可在此装饰器内自定义弹出框内容。CustomDialogController需在@Component内定义。
-<br>@CustomDialog
-struct CustomDialogExample {
-  controller: CustomDialogController
-
-
-  build() {
-    Column() {
-      Text('我是内容')
-        .fontSize(20)
-    }.height(60).justifyContent(FlexAlign.Center)
-  }
-}
-<br>
-<br>创建构造器，与装饰器呼应相连。
-<br> @Entry
- @Component
- struct CustomDialogUser {
-   dialogController: CustomDialogController = new CustomDialogController({
-     builder: CustomDialogExample(),
-   })
- }
-<br>
-<br>点击与onClick事件绑定的组件使弹出框弹出。
-<br>@Entry
-@Component
-struct CustomDialogUser {
-  dialogController: CustomDialogController = new CustomDialogController({
-    builder: CustomDialogExample(),
-  })
-
-
-  build() {
-    Column() {
-      Button('click me')
-        .onClick(() =&gt; {
-          this.dialogController.open();
-        })
-    }.width('100%').margin({ top: 5 })
-  }
-}
-<br><img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png" referrerpolicy="no-referrer"><br><br>弹出框可用于数据交互，完成用户一系列响应操作。<br>
-<br>
-在@CustomDialog装饰器内添加按钮，同时添加数据函数。
-@CustomDialog
-struct CustomDialogExample {
-  cancel: () =&gt; void = () =&gt; {}
-  confirm: () =&gt; void = () =&gt; {}
-  controller: CustomDialogController;
-
-
-  build() {
-    Column() {
-      Text('我是内容').fontSize(20).margin({ top: 10, bottom: 10 })
-      Flex({ justifyContent: FlexAlign.SpaceAround }) {
-        Button('cancel')
-          .onClick(() =&gt; {
-            this.controller.close();
-            if (this.cancel) {
-              this.cancel();
-            }
-          }).backgroundColor(0xffffff).fontColor(Color.Black)
-        Button('confirm')
-          .onClick(() =&gt; {
-            this.controller.close();
-            if (this.confirm) {
-              this.confirm();
-            }
-          }).backgroundColor(0xffffff).fontColor(Color.Red)
-      }.margin({ bottom: 10 })
-    }
-  }
-}
-
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085348889.png" referrerpolicy="no-referrer">
-
-<br>
-页面内需要在构造器内进行接收，同时创建相应的函数操作。
-@Entry
-@Component
-struct CustomDialogUser {
-  dialogController: CustomDialogController = new CustomDialogController({
-    builder: CustomDialogExample({
-      cancel: ()=&gt; { this.onCancel() },
-      confirm: ()=&gt; { this.onAccept() },
-    }),
-  });
-
-
-  onCancel() {
-    console.info('Callback when the first button is clicked');
-  }
-
-
-  onAccept() {
-    console.info('Callback when the second button is clicked');
-  }
-
-
-  build() {
-    Column() {
-      Button('click me')
-        .onClick(() =&gt; {
-          this.dialogController.open();
-        })
-    }.width('100%').margin({ top: 5 })
-  }
-}
-
-<img alt="image.png" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085312742.png" referrerpolicy="no-referrer">
-
-<br>
-可通过弹出框中的按钮实现路由跳转，同时获取跳转页面向当前页传入的参数。
-// Index.ets
-@CustomDialog
-struct CustomDialogExample {
-  @Link textValue: string;
-  controller?: CustomDialogController;
-  cancel: () =&gt; void = () =&gt; {
-  }
-  confirm: () =&gt; void = () =&gt; {
-  }
-
-
-  build() {
-    Column({ space: 20 }) {
-      if (this.textValue != '') {
-        Text(`第二个页面的内容为：${this.textValue}`)
-          .fontSize(20)
-      } else {
-        Text('是否获取第二个页面的内容')
-          .fontSize(20)
-      }
-      Flex({ justifyContent: FlexAlign.SpaceAround }) {
-        Button('cancel')
-          .onClick(() =&gt; {
-            if (this.controller != undefined) {
-              this.controller.close();
-              this.cancel();
-            }
-          }).backgroundColor(0xffffff).fontColor(Color.Black)
-        Button('confirm')
-          .onClick(() =&gt; {
-            if (this.controller != undefined &amp;&amp; this.textValue != '') {
-              this.controller.close();
-            } else if (this.controller != undefined) {
-              this.getUIContext().getRouter().pushUrl({
-                url: 'pages/Index2'
-              });
-              this.controller.close();
-            }
-          }).backgroundColor(0xffffff).fontColor(Color.Red)
-      }.margin({ bottom: 10 })
-    }.borderRadius(10).padding({ top: 20 })
-  }
-}
-
-
-@Entry
-@Component
-struct CustomDialogUser {
-  @State textValue: string = '';
-  dialogController: CustomDialogController | null = new CustomDialogController({
-    builder: CustomDialogExample({
-      cancel: () =&gt; {
-        this.onCancel()
-      },
-      confirm: () =&gt; {
-        this.onAccept()
-      },
-      textValue: this.textValue
-    })
-  });
-
-
-  // 在自定义组件即将析构销毁时将dialogController置空
-  aboutToDisappear() {
-    this.dialogController = null; // 将dialogController置空
-  }
-
-
-  onPageShow() {
-    const params = this.getUIContext().getRouter().getParams() as Record&lt;string, string&gt;; // 获取传递过来的参数对象
-    if (params) {
-      this.dialogController?.open();
-      this.textValue = params.info as string; // 获取info属性的值
-    }
-  }
-
-
-  onCancel() {
-    console.info('Callback when the first button is clicked');
-  }
-
-
-  onAccept() {
-    console.info('Callback when the second button is clicked');
-  }
-
-
-  exitApp() {
-    console.info('Click the callback in the blank area');
-  }
-
-
-  build() {
-    Column() {
-      Button('click me')
-        .onClick(() =&gt; {
-          if (this.dialogController != null) {
-            this.dialogController.open();
-          }
-        }).backgroundColor(0x317aff)
-    }.width('100%').margin({ top: 5 })
-  }
-}
-
-// Index2.ets
-@Entry
-@Component
-struct Index2 {
-  @State message: string = '点击返回';
-
-
-  build() {
-    Column() {
-      Button(this.message)
-        .type(ButtonType.Capsule)
-        .onClick(() =&gt; {
-           this.getUIContext().getRouter().back({
-             url: 'pages/Index',
-             params: {
-             info: 'Hello World'
-           }
-        });
-      })
-    }.width('100%').height('100%').margin({ top: 20 })
-  }
-}
-
-<img alt="0000000000011111111.20250512161414.79394937189607421237077974172139.gif" src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514085243593.gif" referrerpolicy="no-referrer">
-
-<br>弹出框（CustomDialog）可以通过配置<a data-tooltip-position="top" aria-label="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" rel="noopener nofollow" class="external-link" href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-methods-custom-dialog-box#customdialogcontrolleroptions%E5%AF%B9%E8%B1%A1%E8%AF%B4%E6%98%8E" target="_blank">isModal</a>来实现模态和非模态弹窗。isModal为true的时候，弹出框为模态弹窗。isModal为false时，弹出框为非模态弹窗。<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\弹出框.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/弹出框.md</guid><pubDate>Wed, 14 May 2025 00:54:29 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250514084955708.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
+<br>]]></description><link>harmonyos\进阶篇\第7章-高级组件\7.2-轮播图组件.html</link><guid isPermaLink="false">harmonyOS/进阶篇/第7章 高级组件/7.2 轮播图组件.md</guid><pubDate>Tue, 13 May 2025 13:39:18 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211023597.gif" length="0" type="image/gif"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250513211023597.gif"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[布局概述]]></title><description><![CDATA[ 
  布局概述       组件按照布局的要求依次排列，构成应用的页面。在声明式UI中，所有的页面都是由自定义组件构成，开发者可以根据自己的需求，选择合适的布局进行页面开发。    布局指用特定的组件……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\布局概述.html</link><guid isPermaLink="false">harmonyOS/布局/布局概述.md</guid><pubDate>Wed, 07 May 2025 00:03:40 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080339184.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[层叠布局]]></title><description><![CDATA[ 
  层叠布局 (Stack)                 概述     层叠布局（StackLayout）用于在屏幕上预留一块区域来显示组件中的元素，提供元素可以重叠的布局。层叠布局通过Stac……欲了解更多信息欢迎访问华为HarmonyOS开发者官网]]></description><link>harmonyos\布局\层叠布局.html</link><guid isPermaLink="false">harmonyOS/布局/层叠布局.md</guid><pubDate>Wed, 07 May 2025 00:04:23 GMT</pubDate><enclosure url="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://harmonyos-1256472033.cos.ap-shanghai.myqcloud.com/20250507080404087.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.5 进度条组件]]></title><description><![CDATA[ 
  <br><br><br>Progress是进度条显示组件，显示内容通常为目标操作的当前进度。<br><br>Progress通过调用接口来创建，接口调用形式如下：<br>Progress(options: {value: number, total?: number, type?: ProgressType})

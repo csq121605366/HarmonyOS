@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "harmonyOS/进阶篇/第7章 高级组件/固定样式弹出框.md",
+                "file": "harmonyOS/进阶篇/第7章 高级组件/即时反馈组件.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "固定样式弹出框"
+              "title": "即时反馈组件"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "harmonyOS/进阶篇/第7章 高级组件/固定样式弹出框.md",
+                "file": "harmonyOS/进阶篇/第7章 高级组件/基础自定义弹出框.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "固定样式弹出框 的大纲"
+              "title": "基础自定义弹出框 的大纲"
             }
           }
         ],
@@ -170,16 +170,56 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "2d3f78401d2bdfba",
+  "floating": {
+    "id": "2335ccb959205bb6",
+    "type": "floating",
+    "children": [
+      {
+        "id": "f62197bce8060196",
+        "type": "window",
+        "children": [
+          {
+            "id": "71742cd026223fc1",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ccb3d9884432d258",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "harmonyOS/进阶篇/第7章 高级组件/基础自定义弹出框.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "基础自定义弹出框"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 830,
+        "y": 892,
+        "width": 900,
+        "height": 500,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "ccb3d9884432d258",
   "lastOpenFiles": [
+    "harmonyOS/进阶篇/第7章 高级组件/即时反馈组件.md",
     "harmonyOS/进阶篇/第7章 高级组件/固定样式弹出框.md",
+    "harmonyOS/进阶篇/第7章 高级组件/基础自定义弹出框.md",
+    "harmonyOS/进阶篇/第7章 高级组件/7.2 轮播图组件.md",
+    "harmonyOS/进阶篇/第7章 高级组件/7.2 弹窗组件.md",
     "web/harmonyos/进阶篇/第7章-高级组件/固定样式弹出框.html",
     "web/harmonyos/进阶篇/第7章-高级组件/弹出框.html",
     "web/harmonyos/进阶篇/第7章-高级组件/7.2-轮播图组件.html",
-    "harmonyOS/进阶篇/第7章 高级组件/弹出框.md",
-    "harmonyOS/进阶篇/第7章 高级组件/7.2 轮播图组件.md",
     "harmonyOS/进阶篇/第7章 高级组件/7.1 视频播放组件.md",
-    "harmonyOS/进阶篇/第7章 高级组件/7.2 弹窗组件.md",
     "harmonyOS/进阶篇/第7章 高级组件/7.3 组件导航.md",
     "web/harmonyos/进阶篇/第7章-高级组件/7.3-组件导航.html",
     "web/harmonyos/进阶篇/第7章-高级组件/7.2-弹窗组件.html",
